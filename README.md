@@ -8,3 +8,7 @@ Game Off 2017 game
 - create 2d/3d assets
 - create gameplay
 - create menu
+
+## Ideas
+
+- acade mode/campaign mode
