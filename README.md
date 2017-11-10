@@ -2,13 +2,26 @@
 
 Game Off 2017 game
 
-## TODO
-
-- find game to match "throwback" theme
-- create 2d/3d assets
-- create gameplay
-- create menu
 
 ## Ideas
 
-- acade mode/campaign mode
+### general
+
+- 3D game
+- cartoon art
+- find a name
+
+### gameplay
+
+- redo same level
+- character has to avoid to meet previous ghosts
+- respawn in different point at each run
+- character has to collect max pickable objects
+- timer to set difficulty level easily
+
+### enhancement
+
+- sound music
+- sound effect
+- menu design, with credits
+- add story
