@@ -25,3 +25,5 @@ Game Off 2017 game
 - sound effect
 - menu design, with credits
 - add story
+- choose between character model
+- choose between character color
