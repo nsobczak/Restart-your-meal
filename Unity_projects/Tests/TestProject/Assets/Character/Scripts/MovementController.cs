@@ -6,6 +6,7 @@ public class MovementController : MonoBehaviour
 {
     [SerializeField]
     private float Speed = 6.0F;
+    public float getSpeed() { return this.Speed; }
     [SerializeField]
     private float JumpSpeed = 18.0F;
     [SerializeField]
@@ -43,7 +44,7 @@ public class MovementController : MonoBehaviour
         }
         return false;
     }
-    
+
     void Update()
     {
         right_left = Input.GetAxis("Horizontal") * Speed;
@@ -76,5 +77,5 @@ public class MovementController : MonoBehaviour
         forceMove.y = rigid.velocity.y;
         rigid.velocity = forceMove;
     }
-   
+
 }
