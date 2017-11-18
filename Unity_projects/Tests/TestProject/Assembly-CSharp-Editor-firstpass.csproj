@@ -57,9 +57,6 @@
     <None Include="Assets\Character\Shaders\ToonBasicOutline.shader" />
     <None Include="Assets\Character\Shaders\ToonLit.shader" />
     <None Include="Assets\Character\Shaders\ToonLitOutline.shader" />
-    <Reference Include="Assembly-CSharp-firstpass">
-      <HintPath>/home/nicolas/Documents/Jeux/Unity/Game-Off-2017/Unity_projects/Tests/TestProject/Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>/home/nicolas/Unity-2017.3.0b1/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
     </Reference>

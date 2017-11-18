@@ -25,7 +25,7 @@ public class MovementController : MonoBehaviour
     private Vector3 dir;
     private RaycastHit hit;
 
-    // Use this for initialization
+    
     void Start()
     {
         rigid = GetComponent<Rigidbody>();
@@ -44,7 +44,8 @@ public class MovementController : MonoBehaviour
         }
         return false;
     }
-
+    
+    
     void Update()
     {
         right_left = Input.GetAxis("Horizontal") * Speed;
