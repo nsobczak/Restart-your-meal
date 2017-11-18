@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b995d4bd9d11078d11005b9844295342
+guid: 679a682f252443c4b9b7824897d0fd10
 TextureImporter:
   fileIDToRecycleName:
     8900000: generatedCubemap
@@ -66,6 +66,16 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
   - buildTarget: Standalone
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: WebGL
     maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
