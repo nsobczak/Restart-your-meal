@@ -20,7 +20,7 @@ public class MovementController : MonoBehaviour
     private bool doubleJump = false;
 
     [SerializeField]
-    private int dist = 1;
+    private int dist = 2;
     private Vector3 dir;
     private RaycastHit hit;
 
