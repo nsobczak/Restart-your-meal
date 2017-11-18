@@ -30,9 +30,9 @@ Material:
     - _Outline: 0.0156
     - _Shininess: 0.579717
     m_Colors:
-    - _Color: {r: 0.14705884, g: 0.035683393, b: 0.035683393, a: 1}
+    - _Color: {r: 0.30882353, g: 0.30882353, b: 0.30882353, a: 1}
     - _Emission: {r: 0, g: 0, b: 0, a: 0}
-    - _OutlineColor: {r: 0.38235295, g: 0.20523357, b: 0.20523357, a: 1}
+    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1002 &2100001
 EditorExtensionImpl:
