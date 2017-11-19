@@ -7,6 +7,7 @@ public class GhostGenerator : MonoBehaviour
 {
     private static GhostGenerator ghostGeneratorInstance = null;
 
+    [SerializeField] private GameObject ghostPrefab;
     private List<Ghost> ghostList;
     private Ghost currentGhost;
 
@@ -49,6 +50,18 @@ public class GhostGenerator : MonoBehaviour
     }
 
 
+    private void generateGhost()
+    {
+        if (ghostList.Count > 0)
+        {
+            foreach (Ghost ghost in ghostList)
+            {
+                Instantiate(ghostPrefab, ghost.getPositionVector(0), ghost.GetRotationQuaternion(0));
+            }
+        }
+    }
+
+
     void Start()
     {
         isLevelCompleted = false;
@@ -59,24 +72,39 @@ public class GhostGenerator : MonoBehaviour
     }
 
 
-    void LevelCompleted()
+    private void LevelCompleted()
     {
         ghostList.Add(currentGhost);
+    }
+    
+
+    private void RestartLevel()
+    {
+        isLevelCompleted = false;
+        generateGhost();
     }
 
 
     void Update()
     {
-        timerRecordGhostTransform -= Time.deltaTime;
-        if (timerRecordGhostTransform <= 0)
+        if (isLevelCompleted)
         {
-            currentGhost.addTransformData(player.transform);
-            Debug.Log("currentGhost: " + currentGhost.ToString());
-            Debug.Log("ghostList: " + ghostListToString());
-            if (isLevelCompleted)
-                LevelCompleted();
-            Debug.Log("Time.deltaTime: " + Time.time);
-            timerRecordGhostTransform = _TIMER_RECORD_GHOST_TRANSFORM_;
+            LevelCompleted();
+            RestartLevel();
+        }
+        else
+        {
+            timerRecordGhostTransform -= Time.deltaTime;
+            if (timerRecordGhostTransform <= 0)
+            {
+                currentGhost.addTransformData(player.transform);
+                Debug.Log("currentGhost: " + currentGhost.ToString());
+                Debug.Log("ghostList: " + ghostListToString());
+
+                //            Debug.Log("currentGhostData getPositionVector: " + currentGhost.getPositionVector(0));
+                Debug.Log("Time.deltaTime: " + Time.time);
+                timerRecordGhostTransform = _TIMER_RECORD_GHOST_TRANSFORM_;
+            }
         }
     }
 }

@@ -14,13 +14,37 @@ public class Ghost : MonoBehaviour
         this.ghostDataList = new List<GhostData>();
     }
 
+    public List<GhostData> GhostDataList
+    {
+        get { return ghostDataList; }
+        set { ghostDataList = value; }
+    }
+
+    public Vector3 getPositionVector(int index)
+    {
+        return ghostDataList[index].PositionVector3;
+    }
+
+    public Vector3 getRotationVector(int index)
+    {
+        return ghostDataList[index].RotationVector3;
+    }
+
+    public Quaternion GetRotationQuaternion(int index)
+    {
+        return Quaternion.Euler(ghostDataList[index].RotationVector3);
+    }
+
+
     public override string ToString()
     {
         String list = "";
         foreach (GhostData ghostData in ghostDataList)
         {
             list += "pos: " + ghostData.PositionVector3.x + ", " + ghostData.PositionVector3.y + ", " +
-                    ghostData.PositionVector3.z + " |";
+                    ghostData.PositionVector3.z + " |" + " /|\\ rotation: " + ghostData.RotationVector3.x + ", " +
+                    ghostData.RotationVector3.y + ", " +
+                    ghostData.RotationVector3.z + " |";
         }
         return base.ToString() + list;
     }
@@ -28,7 +52,7 @@ public class Ghost : MonoBehaviour
     public void addTransformData(Transform transform)
     {
         Vector3 position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-        Vector3 rotation = new Vector3(transform.rotation.x, transform.rotation.y, transform.rotation.z);
+        Vector3 rotation = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z);
         this.ghostDataList.Add(new GhostData(position, rotation));
     }
 }
