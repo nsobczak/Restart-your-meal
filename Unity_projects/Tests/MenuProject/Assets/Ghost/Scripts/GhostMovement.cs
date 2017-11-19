@@ -9,10 +9,12 @@ public class GhostMovement : MonoBehaviour
     [SerializeField] private int ghostDataIndex;
 
     [SerializeField] private float speed;
-    private float step;
     [SerializeField] private float distanceError;
 
     private float timerBetweenPositions;
+    private float distanceToMove;
+    private Vector3 targetPosition;
+    private Vector3 newDir;
 
     public GhostMovement(Ghost ghost)
     {
@@ -28,18 +30,29 @@ public class GhostMovement : MonoBehaviour
 
     //____________________________________________
 
+    private void computeTargetPosition()
+    {
+        targetPosition = new Vector3(ghost.getPositionVector(ghostDataIndex).x,
+            ghost.getPositionVector(ghostDataIndex).y,
+            ghost.getPositionVector(ghostDataIndex).z);
+    }
 
-    // Use this for initialization
     void Start()
     {
         isGhostMoving = false;
-        ghostDataIndex = 1;
-        speed = 6f;
+
         distanceError = 0.01f;
         timerBetweenPositions = GhostGenerator.GetGhostGeneratorInstance.TimerRecordGhostTransform;
+
+        ghostDataIndex = 1;
+
+        computeTargetPosition();
+
+        distanceToMove = Vector3.Distance(transform.position, targetPosition);
+        speed = distanceToMove / GhostGenerator.GetGhostGeneratorInstance.TimerRecordGhostTransform;
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         if (isGhostMoving && ghostDataIndex < ghost.GhostDataList.Count)
@@ -47,23 +60,27 @@ public class GhostMovement : MonoBehaviour
             //moveGhost
             timerBetweenPositions -= Time.deltaTime;
 
-            step = speed * Time.deltaTime;
-            Vector3 targetPosition = new Vector3(ghost.getPositionVector(ghostDataIndex).x,
-                ghost.getPositionVector(ghostDataIndex).y,
-                ghost.getPositionVector(ghostDataIndex).z);
-            transform.position = Vector3.MoveTowards(transform.position, targetPosition, step);
+            //translate
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
 
-//            transform.eulerAngles = new Vector3(ghost.getRotationVector(ghostDataIndex).x,
-//                ghost.getRotationVector(ghostDataIndex).y, ghost.getRotationVector(ghostDataIndex).z);
-//            Debug.Log("Vector3.Distance(transform.position, targetPosition): " +
-//                      Vector3.Distance(transform.position, targetPosition));
+            //rotate
+            newDir = Vector3.RotateTowards(Vector3.up, targetPosition - transform.position,
+                speed * Time.deltaTime, 0f);
+            Debug.DrawRay(transform.position, newDir, Color.red);
+            transform.rotation = Quaternion.LookRotation(newDir);
+//            transform.rotation = Quaternion.FromToRotation(Vector3.up, targetPosition - transform.position);
+
 
             if (Vector3.Distance(transform.position, targetPosition) < distanceError &&
                 timerBetweenPositions <= 0f)
             {
-                //TODO: calculer la vitesse de déplacement, do function ?
+                computeTargetPosition();
+
                 ghostDataIndex++;
                 timerBetweenPositions = GhostGenerator.GetGhostGeneratorInstance.TimerRecordGhostTransform;
+
+                distanceToMove = Vector3.Distance(transform.position, targetPosition);
+                speed = distanceToMove / GhostGenerator.GetGhostGeneratorInstance.TimerRecordGhostTransform;
             }
         }
     }

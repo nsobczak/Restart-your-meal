@@ -141,6 +141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ghostPrefab: {fileID: 1038174353254122, guid: e65b74dcd41694abd84a5d5c856af160,
     type: 2}
+  ghostList_nextGhostIndex: 0
   player: {fileID: 998147308}
   isLevelCompleted: 0
   _TIMER_RECORD_GHOST_TRANSFORM_: 0.5
@@ -204,6 +205,11 @@ Prefab:
         type: 2}
       propertyPath: Speed
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 54163425861378494, guid: db6f24bca940a40c7a35361bf6f5b931,
+        type: 2}
+      propertyPath: m_Constraints
+      value: 112
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: db6f24bca940a40c7a35361bf6f5b931, type: 2}
