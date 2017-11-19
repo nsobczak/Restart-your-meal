@@ -136,6 +136,7 @@
     <None Include="Assets\Character\Shaders\ToonBasicOutline.shader" />
     <None Include="Assets\Character\Shaders\ToonLit.shader" />
     <None Include="Assets\Character\Shaders\ToonLitOutline.shader" />
+    <None Include="Assets\Shaders\FlatShadedWaterWithEdgeBlend.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
