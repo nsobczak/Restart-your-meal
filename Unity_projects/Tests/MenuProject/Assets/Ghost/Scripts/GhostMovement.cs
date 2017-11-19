@@ -10,6 +10,7 @@ public class GhostMovement : MonoBehaviour
 
     [SerializeField] private float speed;
     [SerializeField] private float distanceError;
+    private const float _POSITION_OFFSET_ = 2f;
 
     private float timerBetweenPositions;
     private float distanceToMove;
@@ -33,7 +34,7 @@ public class GhostMovement : MonoBehaviour
     private void computeTargetPosition()
     {
         targetPosition = new Vector3(ghost.getPositionVector(ghostDataIndex).x,
-            ghost.getPositionVector(ghostDataIndex).y,
+            ghost.getPositionVector(ghostDataIndex).y + _POSITION_OFFSET_,
             ghost.getPositionVector(ghostDataIndex).z);
     }
 
