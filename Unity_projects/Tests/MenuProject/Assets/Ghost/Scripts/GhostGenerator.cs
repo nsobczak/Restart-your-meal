@@ -25,7 +25,7 @@ public class GhostGenerator : MonoBehaviour
     {
     }
 
-    public static GhostGenerator GhostGeneratorInstance
+    public static GhostGenerator GetGhostGeneratorInstance
     {
         get
         {
@@ -39,6 +39,12 @@ public class GhostGenerator : MonoBehaviour
 
 
     //____________________________________________
+
+    public float TimerRecordGhostTransform
+    {
+        get { return _TIMER_RECORD_GHOST_TRANSFORM_; }
+        set { _TIMER_RECORD_GHOST_TRANSFORM_ = value; }
+    }
 
     private String ghostListToString()
     {

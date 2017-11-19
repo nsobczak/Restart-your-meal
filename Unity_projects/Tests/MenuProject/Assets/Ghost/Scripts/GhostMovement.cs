@@ -12,6 +12,8 @@ public class GhostMovement : MonoBehaviour
     private float step;
     [SerializeField] private float distanceError;
 
+    private float timerBetweenPositions;
+
     public GhostMovement(Ghost ghost)
     {
         this.ghost = ghost;
@@ -34,6 +36,7 @@ public class GhostMovement : MonoBehaviour
         ghostDataIndex = 1;
         speed = 6f;
         distanceError = 0.01f;
+        timerBetweenPositions = GhostGenerator.GetGhostGeneratorInstance.TimerRecordGhostTransform;
     }
 
     // Update is called once per frame
@@ -42,6 +45,7 @@ public class GhostMovement : MonoBehaviour
         if (isGhostMoving && ghostDataIndex < ghost.GhostDataList.Count)
         {
             //moveGhost
+            timerBetweenPositions -= Time.deltaTime;
 
             step = speed * Time.deltaTime;
             Vector3 targetPosition = new Vector3(ghost.getPositionVector(ghostDataIndex).x,
@@ -51,12 +55,15 @@ public class GhostMovement : MonoBehaviour
 
 //            transform.eulerAngles = new Vector3(ghost.getRotationVector(ghostDataIndex).x,
 //                ghost.getRotationVector(ghostDataIndex).y, ghost.getRotationVector(ghostDataIndex).z);
-            Debug.Log("Vector3.Distance(transform.position, targetPosition): " +
-                      Vector3.Distance(transform.position, targetPosition));
-            if (Vector3.Distance(transform.position, targetPosition) < distanceError)
+//            Debug.Log("Vector3.Distance(transform.position, targetPosition): " +
+//                      Vector3.Distance(transform.position, targetPosition));
+
+            if (Vector3.Distance(transform.position, targetPosition) < distanceError &&
+                timerBetweenPositions <= 0f)
             {
-                //TODO: aller d'un point à un autre en 1" et attendre 1" si on ne bouge pas
+                //TODO: calculer la vitesse de déplacement, do function ?
                 ghostDataIndex++;
+                timerBetweenPositions = GhostGenerator.GetGhostGeneratorInstance.TimerRecordGhostTransform;
             }
         }
     }
