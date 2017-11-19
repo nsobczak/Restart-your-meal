@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Ghost : MonoBehaviour
 {
+    [SerializeField] private static int ghostGhostInstanceCount = 0;
+
     private List<GhostData> ghostDataList;
 
     //___________________________________________
@@ -12,6 +14,19 @@ public class Ghost : MonoBehaviour
     public Ghost()
     {
         this.ghostDataList = new List<GhostData>();
+        ghostGhostInstanceCount++;
+    }
+
+    ~Ghost()
+    {
+        ghostGhostInstanceCount--;
+    }
+
+
+    public static int GhostGhostInstanceCount
+    {
+        get { return ghostGhostInstanceCount; }
+        set { ghostGhostInstanceCount = value; }
     }
 
     public List<GhostData> GhostDataList
@@ -19,6 +34,7 @@ public class Ghost : MonoBehaviour
         get { return ghostDataList; }
         set { ghostDataList = value; }
     }
+
 
     public Vector3 getPositionVector(int index)
     {
@@ -48,6 +64,7 @@ public class Ghost : MonoBehaviour
         }
         return base.ToString() + list;
     }
+
 
     public void addTransformData(Transform transform)
     {
