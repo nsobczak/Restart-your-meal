@@ -8,6 +8,7 @@ public class GhostData : MonoBehaviour
 
     private Vector3 rotationVector3;
 
+
     public GhostData(Vector3 positionVector3, Vector3 rotationVector3)
     {
         this.positionVector3 = positionVector3;
