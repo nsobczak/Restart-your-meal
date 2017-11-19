@@ -6,6 +6,7 @@ public class MovementController : MonoBehaviour
 {
     [SerializeField]
     private float Speed = 6.0F;
+    public float getSpeed() { return this.Speed; }
     [SerializeField]
     private float JumpSpeed = 18.0F;
     [SerializeField]
@@ -24,7 +25,7 @@ public class MovementController : MonoBehaviour
     private Vector3 dir;
     private RaycastHit hit;
 
-    // Use this for initialization
+
     void Start()
     {
         rigid = GetComponent<Rigidbody>();
@@ -43,16 +44,19 @@ public class MovementController : MonoBehaviour
         }
         return false;
     }
-    
+
+
     void Update()
     {
         right_left = Input.GetAxis("Horizontal") * Speed;
         forward_backward = Input.GetAxis("Vertical") * Speed;
         jumpForce = 0;
         grounding = isGrounding();
+        //Debug.Log("Grounding : " + grounding);
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("space");
+            //Debug.Log("space");
+            //Debug.Log("DoubleJump : " + doubleJump);
             if (!grounding && doubleJump)
             {
                 Debug.Log("doubleJump");
@@ -70,11 +74,11 @@ public class MovementController : MonoBehaviour
         forceMove.z = forward_backward;
         if (jumpForce > 0)
         {
-            rigid.AddForce(new Vector3(0, jumpForce, 0), ForceMode.Impulse);
+            rigid.AddForce(new Vector3(0, jumpForce, 0) * 50, ForceMode.Force); //50 is to avoid using ForceMode.Impulse which is 50 action per frame
         }
-        rigid.AddForce(Vector3.down * Gravity, ForceMode.Force);
+        rigid.AddForce(Vector3.down * Gravity/**Time.deltaTime*/, ForceMode.Force);
         forceMove.y = rigid.velocity.y;
         rigid.velocity = forceMove;
     }
-   
+
 }
