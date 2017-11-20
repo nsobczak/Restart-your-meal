@@ -53,10 +53,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Character\Scripts\MovementController.cs" />
+    <Compile Include="Assets\FollowTarget.cs" />
+    <Compile Include="Assets\Scripts\Water.cs" />
     <None Include="Assets\Character\Shaders\ToonBasic.shader" />
     <None Include="Assets\Character\Shaders\ToonBasicOutline.shader" />
     <None Include="Assets\Character\Shaders\ToonLit.shader" />
     <None Include="Assets\Character\Shaders\ToonLitOutline.shader" />
+    <None Include="Assets\Shaders\FlatShadedWaterWithEdgeBlend.shader" />
     <Reference Include="UnityEngine.UI">
       <HintPath>/home/nicolas/Unity-2017.3.0b1/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
     </Reference>
