@@ -12,12 +12,13 @@ public class Water : MonoBehaviour
 	public float waveLength = 0.71f;
 	public bool edgeBlend=true;
 	public bool forceFlatShading =true;
+    public Camera camera;
 	Mesh mesh;
 	Vector3[] verts;
  
 	void Start ()
 	{
-		Camera.main.depthTextureMode |= DepthTextureMode.Depth;
+		camera.depthTextureMode |= DepthTextureMode.Depth;
 		MeshFilter mf = GetComponent<MeshFilter> ();  
 		makeMeshLowPoly (mf);
  
@@ -48,8 +49,8 @@ public class Water : MonoBehaviour
 		}
 		if (edgeBlend) {
 			Shader.EnableKeyword ("WATER_EDGEBLEND_ON"); 
-			if (Camera.main) {
-				Camera.main.depthTextureMode |= DepthTextureMode.Depth;
+			if (camera) {
+				camera.depthTextureMode |= DepthTextureMode.Depth;
 			}
 		}
 		else { 
