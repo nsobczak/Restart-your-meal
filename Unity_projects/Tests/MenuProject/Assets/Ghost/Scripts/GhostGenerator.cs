@@ -5,23 +5,23 @@ using UnityEngine;
 
 public class GhostGenerator : MonoBehaviour
 {
+    #region Parameters
     private static GhostGenerator ghostGeneratorInstance = null;
 
     [SerializeField] private GameObject ghostPrefab;
-    private List<Ghost> ghostList;
-    [SerializeField] private int ghostList_nextGhostIndex;
-    private Ghost currentGhost;
-
     [SerializeField] private GameObject player;
     [SerializeField] private bool isLevelCompleted;
+    [SerializeField] private int ghostList_newGhostIndex;
+    [SerializeField] private float positionOffset;
+    [SerializeField] private float _FREQUENCY_RECORD_GHOST_TRANSFORM_ = 0.5f; //const ?
 
-    [SerializeField] private float _TIMER_RECORD_GHOST_TRANSFORM_ = 0.5f; //const ?
+    private List<Ghost> ghostList;
+    private Ghost currentGhost;
     private float timerRecordGhostTransform;
+    #endregion
 
-
-    //___________________________________________
-    //singleton
-    public GhostGenerator()
+    #region Singleton
+    private GhostGenerator()
     {
     }
 
@@ -38,60 +38,23 @@ public class GhostGenerator : MonoBehaviour
     }
 
 
-    //____________________________________________
+    #endregion
 
-    public float TimerRecordGhostTransform
+    #region GetSet
+    public float PositionOffset
     {
-        get { return _TIMER_RECORD_GHOST_TRANSFORM_; }
-        set { _TIMER_RECORD_GHOST_TRANSFORM_ = value; }
+        get { return positionOffset; }
     }
-
-    private String ghostListToString()
-    {
-        String result = "";
-        foreach (Ghost ghost in ghostList)
-        {
-            result += ghost.ToString() + "||";
-        }
-        return base.ToString() + result;
-    }
-
-
-    private void generateNextGhost()
-    {
-        if (ghostList.Count > 0)
-        {
-            GameObject newGhost = Instantiate(ghostPrefab, ghostList[ghostList_nextGhostIndex].getPositionVector(0),
-                ghostList[ghostList_nextGhostIndex].GetRotationQuaternion(0));
-            newGhost.AddComponent<GhostMovement>().Ghost = ghostList[ghostList_nextGhostIndex];
-            ghostList_nextGhostIndex++;
-        }
-    }
-
+    #endregion
 
     void Start()
     {
         isLevelCompleted = false;
         currentGhost = new Ghost();
         ghostList = new List<Ghost>();
-        timerRecordGhostTransform = _TIMER_RECORD_GHOST_TRANSFORM_;
-        ghostList_nextGhostIndex = 0;
+        timerRecordGhostTransform = 0;
+        ghostList_newGhostIndex = 0;
     }
-
-
-    private void LevelCompleted()
-    {
-        ghostList.Add(currentGhost);
-    }
-
-
-    private void RestartLevel()
-    {
-        currentGhost = new Ghost();
-        generateNextGhost();
-        isLevelCompleted = false;
-    }
-
 
     void Update()
     {
@@ -102,17 +65,54 @@ public class GhostGenerator : MonoBehaviour
         }
         else
         {
-            timerRecordGhostTransform -= Time.deltaTime;
-            if (timerRecordGhostTransform <= 0)
+            timerRecordGhostTransform += Time.deltaTime;
+            if (timerRecordGhostTransform >= _FREQUENCY_RECORD_GHOST_TRANSFORM_)
             {
                 currentGhost.addTransformData(player.transform);
-//                Debug.Log("currentGhost: " + currentGhost.ToString());
-//                Debug.Log("ghostList: " + ghostListToString());
-
-                //            Debug.Log("currentGhostData getPositionVector: " + currentGhost.getPositionVector(0));
-//                Debug.Log("Time.deltaTime: " + Time.time);
-                timerRecordGhostTransform = _TIMER_RECORD_GHOST_TRANSFORM_;
+                timerRecordGhostTransform = 0;
             }
         }
     }
+
+    #region Methods
+    public float TimerRecordGhostTransform
+    {
+        get { return _FREQUENCY_RECORD_GHOST_TRANSFORM_; }
+        set { _FREQUENCY_RECORD_GHOST_TRANSFORM_ = value; }
+    }
+
+    private String ghostListToString()
+    {
+        String result = "";
+        foreach (Ghost ghost in ghostList)
+        {
+            result += ghost.ToString() + "\n|| -- ";
+        }
+        return base.ToString() + result;
+    }
+
+    private void generateNewGhost()
+    {
+        if (ghostList.Count > 0 && ghostList_newGhostIndex < ghostList.Count)
+        {
+            Ghost ghostToInstantiate = ghostList[ghostList_newGhostIndex];
+            GameObject newGhost = Instantiate(ghostPrefab, ghostToInstantiate.getPosition_i(0), ghostToInstantiate.getRotation_i(0));
+            newGhost.AddComponent<GhostMovement>().Ghost = ghostToInstantiate;
+            ghostList_newGhostIndex++;
+        }
+    }
+
+    private void LevelCompleted()
+    {
+        ghostList.Add(currentGhost);
+    }
+
+    private void RestartLevel()
+    {
+        currentGhost = new Ghost();
+        generateNewGhost();
+        isLevelCompleted = false;
+    }
+    #endregion
+
 }

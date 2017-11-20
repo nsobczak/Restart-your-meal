@@ -1,19 +1,21 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Ghost : MonoBehaviour
 {
+    #region Parameters
     [SerializeField] private static int ghostGhostInstanceCount = 0;
 
-    private List<GhostData> ghostDataList;
+    private List<Vector3> positions;
+    private List<Quaternion> rotations;
+    #endregion
 
-    //___________________________________________
-
+    #region ConstructorDestructor
     public Ghost()
     {
-        this.ghostDataList = new List<GhostData>();
+        this.positions = new List<Vector3>();
+        this.rotations = new List<Quaternion>();
         ghostGhostInstanceCount++;
     }
 
@@ -21,55 +23,56 @@ public class Ghost : MonoBehaviour
     {
         ghostGhostInstanceCount--;
     }
+    #endregion
 
-
+    #region GetSet
     public static int GhostGhostInstanceCount
     {
         get { return ghostGhostInstanceCount; }
-        set { ghostGhostInstanceCount = value; }
+        //set { ghostGhostInstanceCount = value; }
     }
 
-    public List<GhostData> GhostDataList
+    public List<Vector3> Positions
     {
-        get { return ghostDataList; }
-        set { ghostDataList = value; }
+        get { return positions; }
     }
 
-
-    public Vector3 getPositionVector(int index)
+    public List<Quaternion> Rotations
     {
-        return ghostDataList[index].PositionVector3;
+        get { return rotations; }
     }
 
-    public Vector3 getRotationVector(int index)
+    public Vector3 getPosition_i(int index)
     {
-        return ghostDataList[index].RotationVector3;
+        return positions[index];
     }
 
-    public Quaternion GetRotationQuaternion(int index)
+    public Quaternion getRotation_i(int index)
     {
-        return Quaternion.Euler(ghostDataList[index].RotationVector3);
+        return rotations[index];
     }
+    #endregion
 
-
-    public override string ToString()
-    {
-        String list = "";
-        foreach (GhostData ghostData in ghostDataList)
-        {
-            list += "pos: " + ghostData.PositionVector3.x + ", " + ghostData.PositionVector3.y + ", " +
-                    ghostData.PositionVector3.z + " |" + " /|\\ rotation: " + ghostData.RotationVector3.x + ", " +
-                    ghostData.RotationVector3.y + ", " +
-                    ghostData.RotationVector3.z + " |";
-        }
-        return base.ToString() + list;
-    }
-
-
+    #region Methods
     public void addTransformData(Transform transform)
     {
         Vector3 position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-        Vector3 rotation = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z);
-        this.ghostDataList.Add(new GhostData(position, rotation));
+        Quaternion rotation = new Quaternion(transform.rotation.x, transform.rotation.y, transform.rotation.z, transform.rotation.w);
+        this.positions.Add(position);
+        this.rotations.Add(rotation);
     }
+    #endregion
+
+    #region Overrides
+    public override string ToString()
+    {
+        String list = "";
+        foreach (Vector3 ghostData in positions)
+        {
+            list += "pos: " + ghostData.x + ", " + ghostData.y + ", " +
+                    ghostData.z + " |";
+        }
+        return base.ToString() + list;
+    }
+    #endregion
 }

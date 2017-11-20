@@ -53,7 +53,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ghostPrefab: {fileID: 1038174353254122, guid: e65b74dcd41694abd84a5d5c856af160,
     type: 2}
-  ghostList_nextGhostIndex: 0
-  player: {fileID: 1290583892965710, guid: db6f24bca940a40c7a35361bf6f5b931, type: 2}
+  player: {fileID: 0}
   isLevelCompleted: 0
-  _TIMER_RECORD_GHOST_TRANSFORM_: 0.5
+  ghostList_newGhostIndex: 0
+  positionOffset: 2
+  _FREQUENCY_RECORD_GHOST_TRANSFORM_: 0.5

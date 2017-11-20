@@ -74,7 +74,8 @@ public class MovementController : MonoBehaviour
         forceMove.z = forward_backward;
         if (jumpForce > 0)
         {
-            rigid.AddForce(new Vector3(0, jumpForce, 0) * 50, ForceMode.Force); //50 is to avoid using ForceMode.Impulse which is 50 action per frame
+            rigid.AddForce(new Vector3(0, jumpForce, 0), ForceMode.Impulse); //50 is to avoid using ForceMode.Impulse which is 50 action per frame
+            //rigid.AddForce(new Vector3(0, jumpForce, 0) * 50, ForceMode.Force); //50 is to avoid using ForceMode.Impulse which is 50 action per frame
         }
         rigid.AddForce(Vector3.down * Gravity/**Time.deltaTime*/, ForceMode.Force);
         forceMove.y = rigid.velocity.y;
