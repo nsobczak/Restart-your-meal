@@ -6,22 +6,22 @@ using UnityEngine.UI;
 public class FoodCountScript : MonoBehaviour
 {
     private Text textFoodCount;
-    private GameController gameController;
+//    private GameController gameController;
 
     void Start()
     {
         textFoodCount = GetComponent<Text>();
 
-        gameController = GameController.GetGameControllerInstance;
-        Debug.Log("GameController.GetGameControllerInstance: " +
-                  gameController);
+//        gameController = .GetGameControllerInstance;
+//        Debug.Log("GameController.GetGameControllerInstance: " +
+//                  gameController);
     }
 
     void Update()
     {
-        Debug.Log("GameController.GetGameControllerInstance.CollectableFoodCount: " +
-                  gameController.CollectableFoodCount);
+//        Debug.Log("GameController.GetGameControllerInstance.CollectableFoodCount: " +
+//                  gameController.CollectableFoodCount);
 
-        textFoodCount.text = gameController.CollectableFoodCount.ToString();
+        textFoodCount.text = GameController.CollectableFoodCount.ToString();
     }
 }

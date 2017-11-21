@@ -6,7 +6,7 @@ public class GameController : MonoBehaviour
 {
     private static GameController gameControllerInstance = null;
 
-    [SerializeField] private int collectableFoodCount;
+    [SerializeField] private static int collectableFoodCount;
 
 
     //___________________________________________
@@ -26,7 +26,7 @@ public class GameController : MonoBehaviour
         }
     }
 
-    public int CollectableFoodCount
+    public static int CollectableFoodCount
     {
         get { return collectableFoodCount; }
         set { collectableFoodCount = value; }
