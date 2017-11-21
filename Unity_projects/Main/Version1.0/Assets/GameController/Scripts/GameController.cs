@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
     private static GameController gameControllerInstance = null;
 
-    [SerializeField] private static int collectableFoodCount;
+    [SerializeField] private int _max_Collectable_Food_Count_ = 5;
+    private static int collectableFoodCount;
 
 
     //___________________________________________
@@ -36,11 +38,16 @@ public class GameController : MonoBehaviour
     //____________________________________________
 //    void Start()
 //    {
+//    _max_Collectable_Food_Count_ = GameObject.findGameObjectWithTag("Food").Count;
 //    }
 
 
-    void Update()
-    {
-        Debug.Log("collectableFoodCount: " + collectableFoodCount);
-    }
+//    void Update()
+//    {
+//        Debug.Log("collectableFoodCount: " + collectableFoodCount);
+//        if (GameController.collectableFoodCount >= _max_Collectable_Food_Count_)
+//        {
+            // isLevelCompleted = true   
+//        }
+//    }
 }
