@@ -22,6 +22,6 @@ public class FoodCountScript : MonoBehaviour
 //        Debug.Log("GameController.GetGameControllerInstance.CollectableFoodCount: " +
 //                  gameController.CollectableFoodCount);
 
-        textFoodCount.text = GameController.CollectableFoodCount.ToString();
+        textFoodCount.text = GameController.CollectableFoodCount.ToString() + "/" + GameController.MaxCollectableFood.ToString();
     }
 }

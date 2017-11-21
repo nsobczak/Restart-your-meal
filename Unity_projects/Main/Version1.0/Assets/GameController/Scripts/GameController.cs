@@ -5,9 +5,13 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
+    void Awake()
+    {
+        DontDestroyOnLoad(transform.gameObject);
+    }
     private static GameController gameControllerInstance = null;
 
-    [SerializeField] private int _max_Collectable_Food_Count_ = 5;
+    [SerializeField] private static int _max_Collectable_Food_Count_ = 5;
     private static int collectableFoodCount;
 
 
@@ -34,20 +38,25 @@ public class GameController : MonoBehaviour
         set { collectableFoodCount = value; }
     }
 
+    public static int MaxCollectableFood
+    {
+        get { return _max_Collectable_Food_Count_; }
+    }
+
 
     //____________________________________________
-//    void Start()
-//    {
-//    _max_Collectable_Food_Count_ = GameObject.findGameObjectWithTag("Food").Count;
-//    }
+    //    void Start()
+    //    {
+    //    _max_Collectable_Food_Count_ = GameObject.findGameObjectWithTag("Food").Count;
+    //    }
 
 
-//    void Update()
-//    {
-//        Debug.Log("collectableFoodCount: " + collectableFoodCount);
-//        if (GameController.collectableFoodCount >= _max_Collectable_Food_Count_)
-//        {
-            // isLevelCompleted = true   
-//        }
-//    }
+    //    void Update()
+    //    {
+    //        Debug.Log("collectableFoodCount: " + collectableFoodCount);
+    //        if (GameController.collectableFoodCount >= _max_Collectable_Food_Count_)
+    //        {
+    // isLevelCompleted = true   
+    //        }
+    //    }
 }

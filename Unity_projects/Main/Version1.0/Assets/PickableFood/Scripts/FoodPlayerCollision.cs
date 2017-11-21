@@ -8,8 +8,9 @@ public class FoodPlayerCollision : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
-            Debug.Log("collision with player detected");
+            //Debug.Log("collision with player detected");
             Destroy(gameObject);
+            
             GameController.CollectableFoodCount++;
         }
     }

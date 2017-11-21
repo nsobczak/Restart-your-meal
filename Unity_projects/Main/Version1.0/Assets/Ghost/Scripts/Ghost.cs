@@ -60,19 +60,20 @@ public class Ghost : MonoBehaviour
         Quaternion rotation = new Quaternion(transform.rotation.x, transform.rotation.y, transform.rotation.z, transform.rotation.w);
         this.positions.Add(position);
         this.rotations.Add(rotation);
+        //Debug.Log(" position : " + position);
     }
     #endregion
 
     #region Overrides
-    public override string ToString()
-    {
-        String list = "";
-        foreach (Vector3 ghostData in positions)
-        {
-            list += "pos: " + ghostData.x + ", " + ghostData.y + ", " +
-                    ghostData.z + " |";
-        }
-        return base.ToString() + list;
-    }
+    //public override string ToString()
+    //{
+    //    String list = "";
+    //    foreach (Vector3 ghostData in positions)
+    //    {
+    //        list += "pos: " + ghostData.x + ", " + ghostData.y + ", " +
+    //                ghostData.z + " |";
+    //    }
+    //    return base.ToString() + list;
+    //}
     #endregion
 }

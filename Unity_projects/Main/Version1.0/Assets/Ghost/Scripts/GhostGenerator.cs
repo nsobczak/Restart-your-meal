@@ -10,7 +10,7 @@ public class GhostGenerator : MonoBehaviour
 
     [SerializeField] private GameObject ghostPrefab;
     [SerializeField] private GameObject player;
-    [SerializeField] private bool isLevelCompleted;
+    [SerializeField] private static bool isLevelCompleted;
     [SerializeField] private int ghostList_newGhostIndex;
     [SerializeField] private float positionOffset;
     [SerializeField] private float _FREQUENCY_RECORD_GHOST_TRANSFORM_ = 0.5f; //const ?
@@ -21,6 +21,7 @@ public class GhostGenerator : MonoBehaviour
     #endregion
 
     #region Singleton
+
     private GhostGenerator()
     {
     }
@@ -45,7 +46,17 @@ public class GhostGenerator : MonoBehaviour
     {
         get { return positionOffset; }
     }
+    public static bool IsLevelCompleted
+    {
+        get { return isLevelCompleted; }
+        set { isLevelCompleted = value; }
+    }
     #endregion
+
+    void Awake()
+    {
+        DontDestroyOnLoad(transform.gameObject);
+    }
 
     void Start()
     {
@@ -69,6 +80,7 @@ public class GhostGenerator : MonoBehaviour
             if (timerRecordGhostTransform >= _FREQUENCY_RECORD_GHOST_TRANSFORM_)
             {
                 currentGhost.addTransformData(player.transform);
+                Debug.Log(currentGhost + " : current ghost : " + currentGhost.getPosition_i(0));
                 timerRecordGhostTransform = 0;
             }
         }
@@ -96,6 +108,7 @@ public class GhostGenerator : MonoBehaviour
         if (ghostList.Count > 0 && ghostList_newGhostIndex < ghostList.Count)
         {
             Ghost ghostToInstantiate = ghostList[ghostList_newGhostIndex];
+            Debug.Log("Position : " + ghostToInstantiate.Positions.ToString());
             GameObject newGhost = Instantiate(ghostPrefab, ghostToInstantiate.getPosition_i(0), ghostToInstantiate.getRotation_i(0));
             newGhost.AddComponent<GhostMovement>().Ghost = ghostToInstantiate;
             ghostList_newGhostIndex++;
