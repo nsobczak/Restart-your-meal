@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114235546526521770}
   m_Layer: 0
   m_Name: CubeCharacter_cell-shading
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1242362162037024}
   m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.2722626, y: 1.19, z: 10.137436}
+  m_LocalPosition: {x: -0.6154633, y: 4.26, z: -138.42}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -86,7 +86,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1242362162037024}
-  m_Mesh: {fileID: 4300000, guid: 872e2394ba22d4273b84193857221faa, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 9756f753067bf46c7a2c7d9c0dabc98e, type: 3}
 --- !u!54 &54646236998461008
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -125,7 +125,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce95370c69d4e46a9b862dccf5993e87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 6
-  JumpSpeed: 18
-  Gravity: 20
-  dist: 2
+  Speed: 16
+  RotationSpeed: 6
+  JumpSpeed: 10
+  Gravity: 25
+  distance: 2

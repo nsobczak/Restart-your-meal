@@ -84,9 +84,8 @@ public class MovementController : MonoBehaviour
         rigid.velocity = forceMove;
 
         //rotate
-        transform.rotation = Quaternion.LookRotation(new Vector3(forceMove.x, 0, forceMove.z));
-//        transform.rotation = Quaternion.RotateTowards(transform.rotation,
-//            Quaternion.LookRotation(new Vector3(forceMove.x, 0, forceMove.z), Mathf.PI / 4);
-        
+//        transform.rotation = Quaternion.LookRotation(new Vector3(forceMove.x, 0, forceMove.z));
+        transform.rotation = Quaternion.RotateTowards(transform.rotation,
+            Quaternion.LookRotation(new Vector3(forceMove.x, 0, forceMove.z)), 2*Mathf.PI);
     }
 }
