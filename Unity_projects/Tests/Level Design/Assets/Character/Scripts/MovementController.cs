@@ -21,6 +21,5 @@ public class MovementController : MonoBehaviour {
         float forward_backward = Input.GetAxis("Vertical");
         Debug.Log("right_left : " + right_left);
         Debug.Log("forward_backward : " + forward_backward);
-        rigidbody.
 	}
 }
