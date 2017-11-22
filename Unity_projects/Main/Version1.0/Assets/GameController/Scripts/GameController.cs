@@ -7,7 +7,11 @@ public class GameController : MonoBehaviour
 {
     void Awake()
     {
-        DontDestroyOnLoad(transform.gameObject);
+        DontDestroyOnLoad(this);
+        if (FindObjectsOfType(GetType()).Length > 1)
+        {
+            Destroy(gameObject);
+        }
     }
     private static GameController gameControllerInstance = null;
 
