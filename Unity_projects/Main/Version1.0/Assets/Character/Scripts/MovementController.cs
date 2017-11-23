@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MovementController : MonoBehaviour
 {
+    #region Parameters
     [SerializeField] private float Speed = 6.0F;
     [SerializeField] private float RotationSpeed = 6.0F;
 
@@ -22,6 +23,7 @@ public class MovementController : MonoBehaviour
     private Vector3 direction;
     private RaycastHit hit;
 
+    #endregion
 
     public float getSpeed()
     {
@@ -86,6 +88,6 @@ public class MovementController : MonoBehaviour
         //rotate
 //        transform.rotation = Quaternion.LookRotation(new Vector3(forceMove.x, 0, forceMove.z));
         transform.rotation = Quaternion.RotateTowards(transform.rotation,
-            Quaternion.LookRotation(new Vector3(forceMove.x, 0, forceMove.z)), 2*Mathf.PI);
+            Quaternion.LookRotation(-new Vector3(forceMove.x, 0, forceMove.z)), 2*Mathf.PI);
     }
 }
