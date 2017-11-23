@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
+    [SerializeField] private int menuSceneId = 0;
+    
     private static GameController gameControllerInstance = null;
     private static int _max_Collectable_Food_Count_ = 5;
     private static int collectableFoodCount;
@@ -70,8 +73,17 @@ public class GameController : MonoBehaviour
     void GameOver()
     {
         Debug.Log("game over");
-        GhostGenerator.GetGhostGeneratorInstance.IsGameOver = true;
+        GhostGenerator.IsGameOver = true;
         gameOverCanvas.SetActive(true);
+    }
+
+
+    public void GameOverPanelButtonClicked()
+    {
+        Debug.Log("GameOverPanel button clicked");
+        //TODO: open menu scene, destroy this scene and game object
+        SceneManager.LoadScene(menuSceneId);
+        Destroy(gameObject);
     }
 
 
