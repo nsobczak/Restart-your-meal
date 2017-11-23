@@ -1,31 +1,13 @@
 fileFormatVersion: 2
-guid: d124c6722615342e193a4b24c0f164c3
-timeCreated: 1511364149
+guid: 0b75bf9e45c9f4a2d91f328636465bb2
+timeCreated: 1511457672
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: tile_top05
-    2100002: tile_top06
-    2100004: tile_top01
-    2100006: tile_top02
-    2100008: tile_top03
-    2100010: tile_top04
-    2100012: tile_temple
-    2100014: tile_top13
-    2100016: tile_top14
-    2100018: tile_top15
-    2100020: tile_top16
-    2100022: tile_top18
-    2100024: tile_top17
-    2100026: tile_top07
-    2100028: tile_top08
-    2100030: tile_top09
-    2100032: tile_top10
-    2100034: tile_top12
-    2100036: tile_top11
+    2100000: Temple
     2300000: //RootNode
     3300000: //RootNode
     4300000: temple
