@@ -5,22 +5,18 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    void Awake()
-    {
-        DontDestroyOnLoad(this);
-        if (FindObjectsOfType(GetType()).Length > 1)
-        {
-            Destroy(gameObject);
-        }
-    }
     private static GameController gameControllerInstance = null;
-
-    [SerializeField] private static int _max_Collectable_Food_Count_ = 5;
+    private static int _max_Collectable_Food_Count_ = 5;
     private static int collectableFoodCount;
+    private static bool isGameOver;
+
+    private GameObject gameOverCanvas;
 
 
     //___________________________________________
-    // === singleton ===
+
+    #region singleton
+
     private GameController()
     {
         collectableFoodCount = 0;
@@ -36,6 +32,10 @@ public class GameController : MonoBehaviour
         }
     }
 
+    #endregion
+
+    #region Getter/Setter
+
     public static int CollectableFoodCount
     {
         get { return collectableFoodCount; }
@@ -47,20 +47,48 @@ public class GameController : MonoBehaviour
         get { return _max_Collectable_Food_Count_; }
     }
 
+    public static bool IsGameOver
+    {
+        get { return isGameOver; }
+        set { isGameOver = value; }
+    }
+
+    #endregion
+
 
     //____________________________________________
-    //    void Start()
-    //    {
-    //    _max_Collectable_Food_Count_ = GameObject.findGameObjectWithTag("Food").Count;
-    //    }
+    void Awake()
+    {
+        DontDestroyOnLoad(this);
+        if (FindObjectsOfType(GetType()).Length > 1)
+        {
+            Destroy(gameObject);
+        }
+    }
 
 
-    //    void Update()
-    //    {
-    //        Debug.Log("collectableFoodCount: " + collectableFoodCount);
-    //        if (GameController.collectableFoodCount >= _max_Collectable_Food_Count_)
-    //        {
-    // isLevelCompleted = true   
-    //        }
-    //    }
+    void GameOver()
+    {
+        Debug.Log("game over");
+        GhostGenerator.GetGhostGeneratorInstance.IsGameOver = true;
+        gameOverCanvas.SetActive(true);
+    }
+
+
+    //____________________________________________
+    void Start()
+    {
+        isGameOver = false;
+        gameOverCanvas = transform.GetChild(0).gameObject;
+        Debug.Log("gameOverCanvas: " + gameOverCanvas);
+    }
+
+
+    void Update()
+    {
+        if (isGameOver)
+        {
+            GameOver();
+        }
+    }
 }

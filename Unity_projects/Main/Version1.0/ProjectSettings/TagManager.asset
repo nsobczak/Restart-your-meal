@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Terrain
   - Food
+  - Water
   layers:
   - Default
   - TransparentFX
