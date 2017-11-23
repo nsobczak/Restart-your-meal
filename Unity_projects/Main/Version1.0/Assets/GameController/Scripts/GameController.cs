@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     [SerializeField] private int menuSceneId = 0;
-    
+
     private static GameController gameControllerInstance = null;
     private static int _max_Collectable_Food_Count_ = 5;
     private static int collectableFoodCount;
@@ -72,7 +72,6 @@ public class GameController : MonoBehaviour
 
     void GameOver()
     {
-        Debug.Log("game over");
         GhostGenerator.IsGameOver = true;
         gameOverCanvas.SetActive(true);
     }
@@ -80,8 +79,9 @@ public class GameController : MonoBehaviour
 
     public void GameOverPanelButtonClicked()
     {
-        Debug.Log("GameOverPanel button clicked");
         //TODO: open menu scene, destroy this scene and game object
+        Destroy(GameObject.FindGameObjectWithTag("MainMenu"));
+
         SceneManager.LoadScene(menuSceneId);
         Destroy(gameObject);
     }
@@ -92,7 +92,6 @@ public class GameController : MonoBehaviour
     {
         isGameOver = false;
         gameOverCanvas = transform.GetChild(0).gameObject;
-        Debug.Log("gameOverCanvas: " + gameOverCanvas);
     }
 
 
