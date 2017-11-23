@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class MovementController : MonoBehaviour
 {
-    [SerializeField]
-    private float Speed = 6.0F;
-    public float getSpeed() { return this.Speed; }
-    [SerializeField]
-    private float JumpSpeed = 18.0F;
-    [SerializeField]
-    private float Gravity = 20.0F;
+    [SerializeField] private float Speed = 6.0F;
+    [SerializeField] private float RotationSpeed = 6.0F;
+
+    [SerializeField] private float JumpSpeed = 18.0F;
+    [SerializeField] private float Gravity = 20.0F;
 
     private Rigidbody rigid = null;
     private float right_left;
@@ -20,10 +18,15 @@ public class MovementController : MonoBehaviour
     private bool grounding = false;
     private bool doubleJump = false;
 
-    [SerializeField]
-    private int dist = 2;
-    private Vector3 dir;
+    [SerializeField] private int distance = 2;
+    private Vector3 direction;
     private RaycastHit hit;
+
+
+    public float getSpeed()
+    {
+        return this.Speed;
+    }
 
 
     void Start()
@@ -31,17 +34,15 @@ public class MovementController : MonoBehaviour
         rigid = GetComponent<Rigidbody>();
     }
 
+
+    //raycast for double jump
     private bool isGrounding()
     {
-        dir = Vector3.down;
-        Debug.DrawRay(transform.position, dir * dist, Color.green);
-        if (Physics.Raycast(origin: transform.position, direction: dir, hitInfo: out hit, maxDistance: dist))
-        {
-            if (hit.collider.gameObject.tag == "Terrain")
-            {
-                return true;
-            }
-        }
+        direction = Vector3.down;
+        Debug.DrawRay(transform.position, direction * distance, Color.green);
+        if (Physics.Raycast(origin: transform.position, direction: direction, hitInfo: out hit,
+                maxDistance: distance) && hit.collider.gameObject.CompareTag("Terrain"))
+            return true;
         return false;
     }
 
@@ -52,7 +53,7 @@ public class MovementController : MonoBehaviour
         forward_backward = Input.GetAxis("Vertical") * Speed;
         jumpForce = 0;
         grounding = isGrounding();
-        //Debug.Log("Grounding : " + grounding);
+        //jump
         if (Input.GetKeyDown(KeyCode.Space))
         {
             //Debug.Log("space");
@@ -74,12 +75,17 @@ public class MovementController : MonoBehaviour
         forceMove.z = forward_backward;
         if (jumpForce > 0)
         {
-            rigid.AddForce(new Vector3(0, jumpForce, 0), ForceMode.Impulse); //50 is to avoid using ForceMode.Impulse which is 50 action per frame
+            rigid.AddForce(new Vector3(0, jumpForce, 0),
+                ForceMode.Impulse); //50 is to avoid using ForceMode.Impulse which is 50 action per frame
             //rigid.AddForce(new Vector3(0, jumpForce, 0) * 50, ForceMode.Force); //50 is to avoid using ForceMode.Impulse which is 50 action per frame
         }
-        rigid.AddForce(Vector3.down * Gravity/**Time.deltaTime*/, ForceMode.Force);
+        rigid.AddForce(Vector3.down * Gravity /**Time.deltaTime*/, ForceMode.Force);
         forceMove.y = rigid.velocity.y;
         rigid.velocity = forceMove;
-    }
 
+        //rotate
+//        transform.rotation = Quaternion.LookRotation(new Vector3(forceMove.x, 0, forceMove.z));
+        transform.rotation = Quaternion.RotateTowards(transform.rotation,
+            Quaternion.LookRotation(new Vector3(forceMove.x, 0, forceMove.z)), 2*Mathf.PI);
+    }
 }
