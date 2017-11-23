@@ -68,7 +68,7 @@ public class MovementController : MonoBehaviour
             }
             else if (grounding)
             {
-                Debug.Log("jump");
+                //Debug.Log("jump");
                 jumpForce = JumpSpeed;
                 doubleJump = true;
             }

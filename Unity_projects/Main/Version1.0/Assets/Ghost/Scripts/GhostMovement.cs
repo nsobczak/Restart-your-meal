@@ -53,7 +53,7 @@ public class GhostMovement : MonoBehaviour
 
     void Start()
     {
-        isGhostMoving = false;
+        isGhostMoving = true;
 
         distanceError = 0.01f;
         timerBetweenPositions = GhostGenerator.GetGhostGeneratorInstance.TimerRecordGhostTransform;

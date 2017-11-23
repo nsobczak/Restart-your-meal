@@ -64,6 +64,19 @@ public class Ghost : MonoBehaviour
     }
     #endregion
 
+    #region OnTrigger
+    private void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("collision player-water detected");
+            //            Destroy(col.gameObject);
+
+            GameController.IsGameOver = true;
+        }
+    }
+    #endregion
+
     #region Overrides
     //public override string ToString()
     //{
