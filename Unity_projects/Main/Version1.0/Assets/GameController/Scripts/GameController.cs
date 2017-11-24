@@ -9,7 +9,7 @@ public class GameController : MonoBehaviour
     [SerializeField] private int _MENU_SCENE_ID_ = 0; //to start menu scene on game over
 
 
-    private static int _max_Collectable_Food_Count_ = 5;
+    private static int maxCollectableFoodCount;
     private static int collectableFoodCount;
     private static bool isLevelCompleted;
     private static bool isGameOver;
@@ -50,7 +50,7 @@ public class GameController : MonoBehaviour
 
     public static int MaxCollectableFood
     {
-        get { return _max_Collectable_Food_Count_; }
+        get { return maxCollectableFoodCount; }
     }
 
 
@@ -108,12 +108,13 @@ public class GameController : MonoBehaviour
         isLevelCompleted = false;
         isGameOver = false;
         gameOverCanvas = transform.GetChild(0).gameObject;
+        maxCollectableFoodCount = GameObject.FindGameObjectsWithTag("Food").Length;
     }
 
 
     void Update()
     {
-        if (collectableFoodCount == _max_Collectable_Food_Count_)
+        if (collectableFoodCount == maxCollectableFoodCount)
         {
             isLevelCompleted = true;
             LevelCompleted();
