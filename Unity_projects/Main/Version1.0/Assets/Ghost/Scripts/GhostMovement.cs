@@ -78,11 +78,9 @@ public class GhostMovement : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
 
             //rotate
-            newDir = Vector3.RotateTowards(Vector3.forward, targetPosition - transform.position,
-                speed * Time.deltaTime, 0f);
-            Debug.DrawRay(transform.position, newDir, Color.red);
-            transform.rotation = Quaternion.LookRotation(newDir);
-            //            transform.rotation = Quaternion.FromToRotation(Vector3.up, targetPosition - transform.position);
+            Vector3 direction = -targetPosition + transform.position;
+            transform.rotation = Quaternion.RotateTowards(transform.rotation,
+                Quaternion.LookRotation(direction), 2 * Mathf.PI);
 
 
             if (Vector3.Distance(transform.position, targetPosition) < distanceError &&

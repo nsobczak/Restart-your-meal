@@ -5,6 +5,7 @@ using UnityEngine;
 public class MovementController : MonoBehaviour
 {
     #region Parameters
+
     [SerializeField] private float Speed = 6.0F;
     [SerializeField] private float RotationSpeed = 6.0F;
 
@@ -68,7 +69,7 @@ public class MovementController : MonoBehaviour
             }
             else if (grounding)
             {
-                //Debug.Log("jump");
+                Debug.Log("jump");
                 jumpForce = JumpSpeed;
                 doubleJump = true;
             }
@@ -88,6 +89,6 @@ public class MovementController : MonoBehaviour
         //rotate
 //        transform.rotation = Quaternion.LookRotation(new Vector3(forceMove.x, 0, forceMove.z));
         transform.rotation = Quaternion.RotateTowards(transform.rotation,
-            Quaternion.LookRotation(-new Vector3(forceMove.x, 0, forceMove.z)), 2*Mathf.PI);
+            Quaternion.LookRotation(-new Vector3(forceMove.x, 0, forceMove.z)), 2 * Mathf.PI);
     }
 }

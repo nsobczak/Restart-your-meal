@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour
 {
     [SerializeField] private int menuSceneId = 0;
 
+    private static GameController gameControllerInstance = null;
     private static int _max_Collectable_Food_Count_ = 5;
     private static int collectableFoodCount;
     private static bool isGameOver;
@@ -18,7 +19,6 @@ public class GameController : MonoBehaviour
     //___________________________________________
 
     #region singleton
-    private static GameController gameControllerInstance = null;
 
     private GameController()
     {

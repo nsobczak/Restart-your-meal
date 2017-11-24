@@ -7,22 +7,27 @@ using UnityEngine.SceneManagement;
 public class GhostGenerator : MonoBehaviour
 {
     #region Parameters
+
     [SerializeField] private GameObject ghostPrefab;
     [SerializeField] private GameObject player;
     [SerializeField] private static bool isLevelCompleted;
+    [SerializeField] private static bool isGameOver;
     [SerializeField] private int ghostList_newGhostIndex;
     [SerializeField] private float positionOffset;
     [SerializeField] private float _FREQUENCY_RECORD_GHOST_TRANSFORM_ = 0.5f; //const ?
 
-    public static bool IsGameOver = false;
     private List<Ghost> ghostList;
     private Ghost currentGhost;
     private float timerRecordGhostTransform;
+
     #endregion
 
-    #region Singleton
-    private static GhostGenerator ghostGeneratorInstance = null;
+    //_________________________________________________
 
+    #region Singleton
+
+    private static GhostGenerator ghostGeneratorInstance = null;
+    
     private GhostGenerator()
     {
     }
@@ -39,76 +44,35 @@ public class GhostGenerator : MonoBehaviour
         }
     }
 
-
     #endregion
 
+
     #region GetSet
+
     public float PositionOffset
     {
         get { return positionOffset; }
     }
+
     public static bool IsLevelCompleted
     {
         get { return isLevelCompleted; }
         set { isLevelCompleted = value; }
     }
+
+    public static bool IsGameOver
+    {
+        get { return isGameOver; }
+        set { isGameOver = value; }
+    }
+
     #endregion
 
-    void Awake()
-    {
-            DontDestroyOnLoad(this);
-            if (FindObjectsOfType(GetType()).Length > 1)
-            {
-                Destroy(gameObject);
-            }
-    }
 
-    void Start()
-    {
-        player = GameObject.FindGameObjectWithTag("Player");
-        isLevelCompleted = false;
-        IsGameOver = false;
-        currentGhost = new Ghost();
-        ghostList = new List<Ghost>();
-        timerRecordGhostTransform = 0;
-        ghostList_newGhostIndex = 0;
-    }
-
-    void Update()
-    {
-        if (IsGameOver)
-        {
-            Destroy(transform.gameObject);
-        }
-        Debug.Log(SceneManager.GetActiveScene().name);
-        if (SceneManager.GetActiveScene().name == "Level01")
-        {
-            if (isLevelCompleted)
-            {
-                LevelCompleted();
-                RestartLevel();
-            }
-            else
-            {
-                timerRecordGhostTransform += Time.deltaTime;
-                if (timerRecordGhostTransform >= _FREQUENCY_RECORD_GHOST_TRANSFORM_)
-                {
-                    if (player == null)
-                    {
-                        player = GameObject.FindGameObjectWithTag("Player");
-                        generateNewGhost();
-                    }
-                    currentGhost.addTransformData(player.transform);
-
-                    //Debug.Log(currentGhost + " : current ghost : " + currentGhost.getPosition_i(0) + " : player : " + player.transform.position);
-                    //Debug.Log(currentGhost + " :: CURRENT GHOST :: " + currentGhost.Positions.Count);
-                    timerRecordGhostTransform = 0;
-                }
-            }
-        }
-    }
+    //_________________________________________________
 
     #region Methods
+
     public float TimerRecordGhostTransform
     {
         get { return _FREQUENCY_RECORD_GHOST_TRANSFORM_; }
@@ -129,11 +93,19 @@ public class GhostGenerator : MonoBehaviour
     {
         foreach (Ghost ghost in ghostList)
         {
-            //Debug.Log("INSTANCE :: " + ghost);
+            Debug.Log("INSTANCE :: " + ghost);
             GameObject newGhost = Instantiate(ghostPrefab, ghost.getPosition_i(0), ghost.getRotation_i(0));
             newGhost.AddComponent<GhostMovement>().Ghost = ghost;
         }
         ghostList_newGhostIndex++;
+        //if (ghostList.Count > 0 && ghostList_newGhostIndex < ghostList.Count)
+        //{
+        //    Ghost ghostToInstantiate = ghostList[ghostList_newGhostIndex];
+        //    //Debug.Log("Position : " + ghostToInstantiate.Positions.Count);
+        //    GameObject newGhost = Instantiate(ghostPrefab, ghostToInstantiate.getPosition_i(0), ghostToInstantiate.getRotation_i(0));
+        //    newGhost.AddComponent<GhostMovement>().Ghost = ghostToInstantiate;
+        //    ghostList_newGhostIndex++;
+        //}
     }
 
     private void LevelCompleted()
@@ -148,6 +120,66 @@ public class GhostGenerator : MonoBehaviour
         //generateNewGhost();
         isLevelCompleted = false;
     }
+
+    private void GameOver()
+    {
+        Destroy(gameObject);
+    }
+
     #endregion
 
+
+    //_________________________________________________
+    void Awake()
+    {
+        DontDestroyOnLoad(this);
+        if (FindObjectsOfType(GetType()).Length > 1)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+
+    void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        isLevelCompleted = false;
+        isGameOver = false;
+        currentGhost = new Ghost();
+        ghostList = new List<Ghost>();
+        timerRecordGhostTransform = 0;
+        ghostList_newGhostIndex = 0;
+    }
+
+
+    void Update()
+    {
+        if (isGameOver)
+            GameOver();
+        else
+        {
+            if (isLevelCompleted)
+            {
+                LevelCompleted();
+                RestartLevel();
+            }
+            else
+            {
+                timerRecordGhostTransform += Time.deltaTime;
+                if (timerRecordGhostTransform >= _FREQUENCY_RECORD_GHOST_TRANSFORM_)
+                {
+                    if (player == null)
+                    {
+                        player = GameObject.FindGameObjectWithTag("Player");
+                        generateNewGhost();
+                    }
+                    currentGhost.addTransformData(player.transform);
+
+//                Debug.Log(currentGhost + " : current ghost : " + currentGhost.getPosition_i(0) + " : player : " + player.transform.position);
+                    //Debug.Log(currentGhost + " :: CURRENT GHOST :: " + currentGhost.Positions.Count);
+                    timerRecordGhostTransform = 0;
+                }
+            }
+        }
+    }
 }
