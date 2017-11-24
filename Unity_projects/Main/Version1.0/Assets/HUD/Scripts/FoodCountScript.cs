@@ -11,17 +11,12 @@ public class FoodCountScript : MonoBehaviour
     void Start()
     {
         textFoodCount = GetComponent<Text>();
-
-//        gameController = .GetGameControllerInstance;
-//        Debug.Log("GameController.GetGameControllerInstance: " +
-//                  gameController);
     }
 
     void Update()
     {
-//        Debug.Log("GameController.GetGameControllerInstance.CollectableFoodCount: " +
-//                  gameController.CollectableFoodCount);
 
-        textFoodCount.text = GameController.CollectableFoodCount.ToString() + "/" + GameController.MaxCollectableFood.ToString();
+        textFoodCount.text = GameController.CollectableFoodCount.ToString() + "/" +
+                             GameController.MaxCollectableFood.ToString();
     }
 }

@@ -6,11 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
-    [SerializeField] private int menuSceneId = 0;
+    [SerializeField] private int _MENU_SCENE_ID_ = 0; //to start menu scene on game over
 
-    
+
     private static int _max_Collectable_Food_Count_ = 5;
     private static int collectableFoodCount;
+    private static bool isLevelCompleted;
     private static bool isGameOver;
 
     private GameObject gameOverCanvas;
@@ -21,7 +22,7 @@ public class GameController : MonoBehaviour
     #region singleton
 
     private static GameController gameControllerInstance = null;
-    
+
     private GameController()
     {
         collectableFoodCount = 0;
@@ -52,6 +53,13 @@ public class GameController : MonoBehaviour
         get { return _max_Collectable_Food_Count_; }
     }
 
+
+    public static bool IsLevelCompleted
+    {
+        get { return isLevelCompleted; }
+        set { isLevelCompleted = value; }
+    }
+
     public static bool IsGameOver
     {
         get { return isGameOver; }
@@ -72,7 +80,12 @@ public class GameController : MonoBehaviour
     }
 
 
-    void GameOver()
+    private void LevelCompleted()
+    {
+        GhostGenerator.IsLevelCompleted = true;
+    }
+
+    private void GameOver()
     {
         GhostGenerator.IsGameOver = true;
         gameOverCanvas.SetActive(true);
@@ -84,7 +97,7 @@ public class GameController : MonoBehaviour
         //TODO: open menu scene, destroy this scene and game object
         Destroy(GameObject.FindGameObjectWithTag("MainMenu"));
 
-        SceneManager.LoadScene(menuSceneId);
+        SceneManager.LoadScene(_MENU_SCENE_ID_);
         Destroy(gameObject);
     }
 
@@ -92,6 +105,7 @@ public class GameController : MonoBehaviour
     //____________________________________________
     void Start()
     {
+        isLevelCompleted = false;
         isGameOver = false;
         gameOverCanvas = transform.GetChild(0).gameObject;
     }
@@ -99,9 +113,15 @@ public class GameController : MonoBehaviour
 
     void Update()
     {
-        if (isGameOver)
+        if (collectableFoodCount == _max_Collectable_Food_Count_)
         {
-            GameOver();
+            isLevelCompleted = true;
+            LevelCompleted();
+        }
+        else
+        {
+            if (isGameOver)
+                GameOver();
         }
     }
 }

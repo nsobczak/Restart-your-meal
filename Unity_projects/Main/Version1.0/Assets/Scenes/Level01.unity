@@ -172,6 +172,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114921776788065892, guid: 5880fa03745b14d7b847c61659943bc2,
+        type: 2}
+      propertyPath: timer
+      value: 
+      objectReference: {fileID: 978378206}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5880fa03745b14d7b847c61659943bc2, type: 2}
   m_IsPrefabParent: 0
@@ -728,6 +733,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4552517005156820, guid: 8f1288476c62341cd9350be5f6e3591c,
     type: 2}
   m_PrefabInternal: {fileID: 1967152481}
+--- !u!1 &978378206 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1451344003152922, guid: 9777c7cedfea141b8ad91e41beb4c4ea,
+    type: 2}
+  m_PrefabInternal: {fileID: 1192722673}
 --- !u!1 &978487559
 GameObject:
   m_ObjectHideFlags: 0
@@ -1184,6 +1194,14 @@ Prefab:
         type: 2}
       propertyPath: m_LocalPosition.y
       value: -38.000004
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451344003152922, guid: 9777c7cedfea141b8ad91e41beb4c4ea, type: 2}
+      propertyPath: m_Name
+      value: TimerValue
+      objectReference: {fileID: 0}
+    - target: {fileID: 1540412328138442, guid: 9777c7cedfea141b8ad91e41beb4c4ea, type: 2}
+      propertyPath: m_Name
+      value: FoodValue
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9777c7cedfea141b8ad91e41beb4c4ea, type: 2}
