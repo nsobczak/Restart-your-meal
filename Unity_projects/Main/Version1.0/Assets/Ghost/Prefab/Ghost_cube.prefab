@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 4507239114755468}
   - component: {fileID: 33093907250291204}
   - component: {fileID: 23018840788604622}
+  - component: {fileID: 64106359815338394}
+  - component: {fileID: 114658333594261602}
   m_Layer: 0
   m_Name: Ghost_cube
   m_TagString: Untagged
@@ -35,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1863550727802760}
   m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.2185364, y: 2.46, z: 0.89}
+  m_LocalPosition: {x: 7.33, y: 3.67, z: -1.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -84,3 +86,28 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1863550727802760}
   m_Mesh: {fileID: 4300000, guid: 41235504399c04753905e46c9d81056c, type: 3}
+--- !u!64 &64106359815338394
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1863550727802760}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: be9810980128d4ef2ab1f6a5f53849ff, type: 3}
+--- !u!114 &114658333594261602
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1863550727802760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92d831c0de62e45b2ba444f9190c9a7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
