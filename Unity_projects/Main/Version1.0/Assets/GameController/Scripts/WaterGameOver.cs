@@ -6,7 +6,7 @@ public class WaterGameOver : MonoBehaviour
 {
     void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.CompareTag("Player"))
+        if (!GameController.IsLevelCompleted && col.gameObject.CompareTag("Player"))
         {
             Debug.Log("collision player-water detected");
 //            Destroy(col.gameObject);

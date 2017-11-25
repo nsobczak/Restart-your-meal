@@ -87,19 +87,27 @@ public class GameController : MonoBehaviour
         levelCompletedCanvas.SetActive(true);
     }
 
-    public void LevelCompletedPanelButtonClicked()
-    {
-        Debug.Log("LevelCompletedPanelButtonClicked");
-        isLevelCompleted = false;
-        GhostGenerator.IsLevelCompleted = false;
-        levelCompletedCanvas.SetActive(false);
-        GhostGenerator.IsLevelRestarted = true;
-    }
 
     private void GameOver()
     {
         GhostGenerator.IsGameOver = true;
         gameOverCanvas.SetActive(true);
+    }
+
+    //____________________________________________
+
+    #region Button
+
+    public void LevelCompletedPanelButtonClicked()
+    {
+        Debug.Log("LevelCompletedPanelButtonClicked");
+        levelCompletedCanvas.SetActive(false);
+        GhostGenerator.IsLevelRestarted = true;
+        GhostGenerator.IsLevelCompleted = false;
+
+        isLevelCompleted = false;
+        collectableFoodCount = 0;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
 
@@ -111,6 +119,8 @@ public class GameController : MonoBehaviour
         SceneManager.LoadScene(_MENU_SCENE_ID_);
         Destroy(gameObject);
     }
+
+    #endregion
 
 
     //____________________________________________

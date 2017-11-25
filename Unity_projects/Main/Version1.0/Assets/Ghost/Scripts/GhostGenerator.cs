@@ -16,7 +16,7 @@ public class GhostGenerator : MonoBehaviour
     [SerializeField] private float positionOffset;
     [SerializeField] private float _FREQUENCY_RECORD_GHOST_TRANSFORM_ = 0.5f;
 
-    [SerializeField] private List<Ghost> ghostList;
+    private List<Ghost> ghostList;
     private Ghost currentGhost;
     [SerializeField] private bool isCurrentGhostAdded;
     private float timerRecordGhostTransform;
@@ -161,19 +161,16 @@ public class GhostGenerator : MonoBehaviour
         isLevelRestarted = false;
         isGameOver = false;
 
-        while (currentGhost == null)
-            currentGhost = new Ghost();
-        Debug.Log("currentGhost: " + currentGhost);
+        currentGhost = new Ghost();
+//        Debug.Log("currentGhost: " + currentGhost);
         ghostList = new List<Ghost>();
-        Debug.Log("start ghostList.Count :: " + ghostList.Count);
+//        Debug.Log("start ghostList.Count :: " + ghostList.Count);
         timerRecordGhostTransform = 0f;
     }
 
 
     void Update()
     {
-        Debug.Log("ghostList.Count :: " + ghostList.Count);
-
         if (isGameOver)
             GameOver();
         else
@@ -181,11 +178,11 @@ public class GhostGenerator : MonoBehaviour
             if (isLevelCompleted)
             {
                 LevelCompleted();
-                if (isLevelRestarted)
-                {
-                    RestartLevel();
-                    isLevelRestarted = false;
-                }
+            }
+            else if (isLevelRestarted)
+            {
+                RestartLevel();
+                isLevelRestarted = false;
             }
             else
             {

@@ -7,7 +7,7 @@ public class GhostGameOver : MonoBehaviour
     #region OnTrigger
     private void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.CompareTag("Player"))
+        if (!GameController.IsLevelCompleted && col.gameObject.CompareTag("Player"))
         {
             Debug.Log("collision player-ghost detected");
             //            Destroy(col.gameObject);

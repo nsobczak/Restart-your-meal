@@ -28,9 +28,7 @@ public class TimerScript : MonoBehaviour
     {
         if (GameController.IsLevelCompleted)
             currentTime = _START_TIME_;
-
-        //Debug.Log(Time.time);
-        if (currentTime > 0)
+        else if (currentTime > 0)
         {
             //float currentTime = Time.time - startTime;
             currentTime -= Time.deltaTime;
