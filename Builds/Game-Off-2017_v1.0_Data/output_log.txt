@@ -1,0 +1,1965 @@
+Initialize engine version: 2017.1.0f3 (472613c02cf7)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 1070 (ID=0x1b81)
+    Vendor:   NVIDIA
+    VRAM:     8085 MB
+    Driver:   23.21.13.8831
+Begin MonoManager ReloadAssembly
+Platform assembly: E:\Documents\Git\Game-Off-2017\Build\Game-Off-2017_v1.0_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading E:\Documents\Git\Game-Off-2017\Build\Game-Off-2017_v1.0_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: E:\Documents\Git\Game-Off-2017\Build\Game-Off-2017_v1.0_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading E:\Documents\Git\Game-Off-2017\Build\Game-Off-2017_v1.0_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: E:\Documents\Git\Game-Off-2017\Build\Game-Off-2017_v1.0_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading E:\Documents\Git\Game-Off-2017\Build\Game-Off-2017_v1.0_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: E:\Documents\Git\Game-Off-2017\Build\Game-Off-2017_v1.0_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading E:\Documents\Git\Game-Off-2017\Build\Game-Off-2017_v1.0_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: E:\Documents\Git\Game-Off-2017\Build\Game-Off-2017_v1.0_Data\Managed\UnityEngine.Timeline.dll (this message is harmless)
+Loading E:\Documents\Git\Game-Off-2017\Build\Game-Off-2017_v1.0_Data\Managed\UnityEngine.Timeline.dll into Unity Child Domain
+Platform assembly: E:\Documents\Git\Game-Off-2017\Build\Game-Off-2017_v1.0_Data\Managed\System.dll (this message is harmless)
+Platform assembly: E:\Documents\Git\Game-Off-2017\Build\Game-Off-2017_v1.0_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.014 seconds
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.478937 ms
+Setting up 4 worker threads for Enlighten.
+  Thread -> id: 2474 -> priority: 1 
+  Thread -> id: 2eac -> priority: 1 
+  Thread -> id: f70 -> priority: 1 
+  Thread -> id: 2a50 -> priority: 1 
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 3.186779 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1295.
+Total: 1.020873 ms (FindLiveObjects: 0.109853 ms CreateObjectMapping: 0.043686 ms MarkObjects: 0.851238 ms  DeleteObjects: 0.015072 ms)
+
+new ghost created
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+newSpawningPointPostion: (-57.7, 8.5, -62.9)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+LevelCompletedPanelButtonClicked
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+new ghost created
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.780727 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 1364.
+Total: 1.040033 ms (FindLiveObjects: 0.102189 ms CreateObjectMapping: 0.053649 ms MarkObjects: 0.875764 ms  DeleteObjects: 0.007408 ms)
+
+newSpawningPointPostion: (-39.8, 8.5, -100.9)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+ghostList :: System.Collections.Generic.List`1[Ghost]
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ghostList.Count :: 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+INSTANCE :: null
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+LevelCompletedPanelButtonClicked
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+new ghost created
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.948574 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 1364.
+Total: 1.082697 ms (FindLiveObjects: 0.114196 ms CreateObjectMapping: 0.063357 ms MarkObjects: 0.896202 ms  DeleteObjects: 0.007919 ms)
+
+newSpawningPointPostion: (-59.4, 8.5, -47.9)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+ghostList :: System.Collections.Generic.List`1[Ghost]
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ghostList.Count :: 2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+INSTANCE :: null
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+INSTANCE :: null
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 92)
+
