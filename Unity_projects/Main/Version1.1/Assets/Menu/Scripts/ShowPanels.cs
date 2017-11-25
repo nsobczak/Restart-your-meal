@@ -3,8 +3,10 @@ using System.Collections;
 
 public class ShowPanels : MonoBehaviour
 {
-    public GameObject optionsPanel; //Store a reference to the Game Object OptionsPanel 
     public GameObject optionsTint; //Store a reference to the Game Object OptionsTint 
+
+    public GameObject rulesPanel;
+    public GameObject optionsPanel; //Store a reference to the Game Object OptionsPanel 
     public GameObject highscorePanel;
     public GameObject creditsPanel;
     public GameObject menuPanel; //Store a reference to the Game Object MenuPanel 
@@ -13,6 +15,12 @@ public class ShowPanels : MonoBehaviour
 
     // === show functions ===
 
+    public void ShowRulesPanel()
+    {
+        rulesPanel.SetActive(true);
+        optionsTint.SetActive(true);
+    }
+    
     public void ShowOptionsPanel()
     {
         optionsPanel.SetActive(true);
@@ -22,18 +30,19 @@ public class ShowPanels : MonoBehaviour
     public void ShowHighscorePanel()
     {
         highscorePanel.SetActive(true);
-        highscorePanel.SetActive(true);
+        optionsTint.SetActive(true);
     }
     
     public void ShowCreditsPanel()
     {
         creditsPanel.SetActive(true);
-        creditsPanel.SetActive(true);
+        optionsTint.SetActive(true);
     }
 
     public void ShowMenu()
     {
         menuPanel.SetActive(true);
+        optionsTint.SetActive(true);
     }
 
     public void ShowPausePanel()
@@ -45,6 +54,12 @@ public class ShowPanels : MonoBehaviour
 
     // === hide functions ===
 
+    public void HideRulesPanel()
+    {
+        rulesPanel.SetActive(false);
+        rulesPanel.SetActive(false);
+    }
+    
     public void HideOptionsPanel()
     {
         optionsPanel.SetActive(false);
@@ -54,13 +69,13 @@ public class ShowPanels : MonoBehaviour
     public void HideHighscorePanel()
     {
         highscorePanel.SetActive(false);
-        highscorePanel.SetActive(false);
+        optionsTint.SetActive(false);
     }
     
     public void HideCreditsPanel()
     {
         creditsPanel.SetActive(false);
-        creditsPanel.SetActive(false);
+        optionsTint.SetActive(false);
     }
 
     public void HideMenu()
