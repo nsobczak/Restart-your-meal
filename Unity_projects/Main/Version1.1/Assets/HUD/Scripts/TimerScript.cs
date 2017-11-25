@@ -33,12 +33,13 @@ public class TimerScript : MonoBehaviour
             //float currentTime = Time.time - startTime;
             currentTime -= Time.deltaTime;
 
-            int minutes = (int) (currentTime / 60);
-            int seconds = (int) (currentTime % 60);
-            int fraction = (int) ((currentTime * 100) % 100);
+//            int minutes = (int) (currentTime / 60);
+//            int seconds = (int) (currentTime % 60);
+//            int fraction = (int) ((currentTime * 100) % 100);
 
-            Timer = String.Format("{0:00}:{1:00}:{2:00}", minutes, seconds, fraction);
-            textTime.text = Timer;
+//            Timer = String.Format("{0:00}:{1:00}:{2:00}", minutes, seconds, fraction);
+//            Timer = String.Format("{0:00}", currentTime);
+            textTime.text = String.Format("{0:00}\"", currentTime);
         }
         else
             GameController.IsGameOver = true;

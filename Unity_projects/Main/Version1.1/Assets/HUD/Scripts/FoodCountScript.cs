@@ -15,8 +15,7 @@ public class FoodCountScript : MonoBehaviour
 
     void Update()
     {
-
-        textFoodCount.text = GameController.CollectableFoodCount.ToString() + "/" +
+        textFoodCount.text = " " + GameController.CollectableFoodCount.ToString() + "/" +
                              GameController.MaxCollectableFood.ToString();
     }
 }
