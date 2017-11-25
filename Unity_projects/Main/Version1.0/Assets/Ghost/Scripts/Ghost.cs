@@ -5,7 +5,7 @@ using UnityEngine;
 public class Ghost : MonoBehaviour
 {
     #region Parameters
-    [SerializeField] private static int ghostGhostInstanceCount = 0;
+    private static int ghostGhostInstanceCount = 0;
 
     private List<Vector3> positions;
     private List<Quaternion> rotations;
@@ -14,6 +14,7 @@ public class Ghost : MonoBehaviour
     #region ConstructorDestructor
     public Ghost()
     {
+        Debug.Log("new ghost created");
         this.positions = new List<Vector3>();
         this.rotations = new List<Quaternion>();
         ghostGhostInstanceCount++;
@@ -56,10 +57,10 @@ public class Ghost : MonoBehaviour
     #region Methods
     public void addTransformData(Transform transform)
     {
-        Vector3 position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-        Quaternion rotation = new Quaternion(transform.rotation.x, transform.rotation.y, transform.rotation.z, transform.rotation.w);
-        this.positions.Add(position);
-        this.rotations.Add(rotation);
+        Vector3 newPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        Quaternion newRotation = new Quaternion(transform.rotation.x, transform.rotation.y, transform.rotation.z, transform.rotation.w);
+        this.positions.Add(newPosition);
+        this.rotations.Add(newRotation);
         //Debug.Log(" position : " + position);
     }
     #endregion

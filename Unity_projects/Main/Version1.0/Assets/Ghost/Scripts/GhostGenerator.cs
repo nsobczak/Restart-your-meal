@@ -11,13 +11,14 @@ public class GhostGenerator : MonoBehaviour
     [SerializeField] private GameObject ghostPrefab;
     [SerializeField] private GameObject player;
     [SerializeField] private static bool isLevelCompleted;
+    [SerializeField] private static bool isLevelRestarted;
     [SerializeField] private static bool isGameOver;
-    [SerializeField] private int ghostList_newGhostIndex;
     [SerializeField] private float positionOffset;
-    [SerializeField] private float _FREQUENCY_RECORD_GHOST_TRANSFORM_ = 0.5f; //const ?
+    [SerializeField] private float _FREQUENCY_RECORD_GHOST_TRANSFORM_ = 0.5f;
 
-    private List<Ghost> ghostList;
+    [SerializeField] private List<Ghost> ghostList;
     private Ghost currentGhost;
+    [SerializeField] private bool isCurrentGhostAdded;
     private float timerRecordGhostTransform;
 
     #endregion
@@ -27,7 +28,7 @@ public class GhostGenerator : MonoBehaviour
     #region Singleton
 
     private static GhostGenerator ghostGeneratorInstance = null;
-    
+
     private GhostGenerator()
     {
     }
@@ -58,6 +59,12 @@ public class GhostGenerator : MonoBehaviour
     {
         get { return isLevelCompleted; }
         set { isLevelCompleted = value; }
+    }
+
+    public static bool IsLevelRestarted
+    {
+        get { return isLevelRestarted; }
+        set { isLevelRestarted = value; }
     }
 
     public static bool IsGameOver
@@ -91,13 +98,15 @@ public class GhostGenerator : MonoBehaviour
 
     private void generateNewGhost()
     {
+        Debug.Log("ghostList :: " + ghostList);
+        Debug.Log("ghostList.Count :: " + ghostList.Count);
         foreach (Ghost ghost in ghostList)
         {
             Debug.Log("INSTANCE :: " + ghost);
             GameObject newGhost = Instantiate(ghostPrefab, ghost.getPosition_i(0), ghost.getRotation_i(0));
             newGhost.AddComponent<GhostMovement>().Ghost = ghost;
         }
-        ghostList_newGhostIndex++;
+
         //if (ghostList.Count > 0 && ghostList_newGhostIndex < ghostList.Count)
         //{
         //    Ghost ghostToInstantiate = ghostList[ghostList_newGhostIndex];
@@ -110,15 +119,20 @@ public class GhostGenerator : MonoBehaviour
 
     private void LevelCompleted()
     {
-        ghostList.Add(currentGhost);
+        if (!isCurrentGhostAdded)
+        {
+            ghostList.Add(currentGhost);
+            isCurrentGhostAdded = true;
+        }
     }
 
     private void RestartLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         currentGhost = new Ghost();
+        isCurrentGhostAdded = false;
         //generateNewGhost();
         isLevelCompleted = false;
+        timerRecordGhostTransform = 0f;
     }
 
     private void GameOver()
@@ -144,16 +158,22 @@ public class GhostGenerator : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         isLevelCompleted = false;
+        isLevelRestarted = false;
         isGameOver = false;
-        currentGhost = new Ghost();
+
+        while (currentGhost == null)
+            currentGhost = new Ghost();
+        Debug.Log("currentGhost: " + currentGhost);
         ghostList = new List<Ghost>();
-        timerRecordGhostTransform = 0;
-        ghostList_newGhostIndex = 0;
+        Debug.Log("start ghostList.Count :: " + ghostList.Count);
+        timerRecordGhostTransform = 0f;
     }
 
 
     void Update()
     {
+        Debug.Log("ghostList.Count :: " + ghostList.Count);
+
         if (isGameOver)
             GameOver();
         else
@@ -161,7 +181,11 @@ public class GhostGenerator : MonoBehaviour
             if (isLevelCompleted)
             {
                 LevelCompleted();
-                RestartLevel();
+                if (isLevelRestarted)
+                {
+                    RestartLevel();
+                    isLevelRestarted = false;
+                }
             }
             else
             {

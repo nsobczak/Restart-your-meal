@@ -14,6 +14,7 @@ public class GameController : MonoBehaviour
     private static bool isLevelCompleted;
     private static bool isGameOver;
 
+    private GameObject levelCompletedCanvas;
     private GameObject gameOverCanvas;
 
 
@@ -83,6 +84,16 @@ public class GameController : MonoBehaviour
     private void LevelCompleted()
     {
         GhostGenerator.IsLevelCompleted = true;
+        levelCompletedCanvas.SetActive(true);
+    }
+
+    public void LevelCompletedPanelButtonClicked()
+    {
+        Debug.Log("LevelCompletedPanelButtonClicked");
+        isLevelCompleted = false;
+        GhostGenerator.IsLevelCompleted = false;
+        levelCompletedCanvas.SetActive(false);
+        GhostGenerator.IsLevelRestarted = true;
     }
 
     private void GameOver()
@@ -107,22 +118,26 @@ public class GameController : MonoBehaviour
     {
         isLevelCompleted = false;
         isGameOver = false;
-        gameOverCanvas = transform.GetChild(0).gameObject;
+        levelCompletedCanvas = transform.GetChild(0).gameObject;
+        gameOverCanvas = transform.GetChild(1).gameObject;
         maxCollectableFoodCount = GameObject.FindGameObjectsWithTag("Food").Length;
     }
 
 
     void Update()
     {
-        if (collectableFoodCount == maxCollectableFoodCount)
+        if (!isLevelCompleted)
         {
-            isLevelCompleted = true;
-            LevelCompleted();
-        }
-        else
-        {
-            if (isGameOver)
-                GameOver();
+            if (collectableFoodCount == maxCollectableFoodCount)
+            {
+                isLevelCompleted = true;
+                LevelCompleted();
+            }
+            else
+            {
+                if (isGameOver)
+                    GameOver();
+            }
         }
     }
 }
