@@ -15,12 +15,11 @@ public class SpawningPointController : MonoBehaviour
     [SerializeField] private float _SPAWNING_POINT_OFFSET_ = 6f;
     [SerializeField] private int _RADIUS_MIN_ = 30;
     [SerializeField] private int _RADIUS_MAX_ = 50;
+    [SerializeField] private float _DISTANCE_MIN_BETWEEN_SPAWNING_POINTS_ = 4f;
 
 
     [SerializeField] private bool instantiateNewSpawningPoint;
-
-    [SerializeField]
-    private int spawningPointCount; //may be useless if we create a new point each time we restart level
+    private List<Vector3> spawningPointPositions;
 
     private GameObject player;
 
@@ -68,16 +67,42 @@ public class SpawningPointController : MonoBehaviour
     }
 
 
+    //check distance btween spawning points
+    private bool isNewSpawningPointValid(Vector3 newSpawningPointPostion)
+    {
+        if (spawningPointPositions.Count > 0)
+        {
+            foreach (Vector3 spawningPoint in spawningPointPositions)
+            {
+                if (Vector3.Distance(newSpawningPointPostion, spawningPoint) < _DISTANCE_MIN_BETWEEN_SPAWNING_POINTS_)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        else
+            return true;
+    }
+
+
     private void AddSpawningPoint()
     {
-        spawningPointCount++;
         Vector3 newSpawningPointPostion = computeNewPosition();
+
+        while (!isNewSpawningPointValid(newSpawningPointPostion))
+            newSpawningPointPostion = computeNewPosition();
+
+
         Debug.Log("newSpawningPointPostion: " + newSpawningPointPostion);
         currentSpawningPoint = Instantiate(spawningPointPrefab, newSpawningPointPostion,
             Quaternion.identity);
         currentSpawningPoint.transform.parent = transform;
 
-//        currentSpawningPoint.GetComponent<MeshRenderer>().gameObject.SetActive(false); //make it invisible
+        //add it to the list
+        spawningPointPositions.Add(currentSpawningPoint.transform.position);
+        //make it invisible
+        currentSpawningPoint.GetComponent<MeshRenderer>().gameObject.SetActive(false); 
     }
 
 
@@ -97,7 +122,7 @@ public class SpawningPointController : MonoBehaviour
     {
         instantiateNewSpawningPoint = false;
 
-        spawningPointCount = 0;
+        spawningPointPositions = new List<Vector3>();
         AddSpawningPoint();
 
         player = GameObject.FindGameObjectWithTag("Player");
