@@ -17,6 +17,9 @@ public class GameController : MonoBehaviour
     private GameObject levelCompletedCanvas;
     private GameObject gameOverCanvas;
 
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip levelCompletedAudioClip;
+
 
     //___________________________________________
 
@@ -83,6 +86,7 @@ public class GameController : MonoBehaviour
 
     private void LevelCompleted()
     {
+        audioSource.Play();
         GhostGenerator.IsLevelCompleted = true;
         levelCompletedCanvas.SetActive(true);
     }
@@ -131,6 +135,9 @@ public class GameController : MonoBehaviour
         levelCompletedCanvas = transform.GetChild(0).gameObject;
         gameOverCanvas = transform.GetChild(1).gameObject;
         maxCollectableFoodCount = GameObject.FindGameObjectsWithTag("Food").Length;
+
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.clip = levelCompletedAudioClip;
     }
 
 
