@@ -1,11 +1,13 @@
 fileFormatVersion: 2
 guid: 0b29973ef659a4d6aa480aa5748c5e48
-timeCreated: 1511461786
+timeCreated: 1511722638
 licenseType: Free
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - splashInWaterAudioClip: {fileID: 8300000, guid: f05d50f8dcefbd24db7d3c7b04cee55d,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

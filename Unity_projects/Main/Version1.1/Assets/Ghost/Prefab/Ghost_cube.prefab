@@ -111,3 +111,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92d831c0de62e45b2ba444f9190c9a7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ghostMetAudioClip: {fileID: 8300000, guid: ad8e5e3e71ecef94aa18061ce58c759c, type: 3}

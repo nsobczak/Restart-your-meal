@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
@@ -8,17 +9,20 @@ public class GameController : MonoBehaviour
 {
     [SerializeField] private int _MENU_SCENE_ID_ = 0; //to start menu scene on game over
 
-
+    [SerializeField] private String _FOOD_TAG_ = "Food";
     private static int maxCollectableFoodCount;
     private static int collectableFoodCount;
+
     private static bool isLevelCompleted;
     private static bool isGameOver;
-
     private GameObject levelCompletedCanvas;
     private GameObject gameOverCanvas;
 
     private AudioSource audioSource;
     [SerializeField] private AudioClip levelCompletedAudioClip;
+
+    private GameObject mainMenu;
+    [SerializeField] private String _MAIN_MENU_TAG_ = "MainMenu";
 
 
     //___________________________________________
@@ -96,6 +100,8 @@ public class GameController : MonoBehaviour
     {
         GhostGenerator.IsGameOver = true;
         gameOverCanvas.SetActive(true);
+        if (null != mainMenu) //to test when only scene "level01" is started
+            mainMenu.GetComponent<AudioSource>().Stop();
     }
 
     //____________________________________________
@@ -118,7 +124,7 @@ public class GameController : MonoBehaviour
     public void GameOverPanelButtonClicked()
     {
         //TODO: open menu scene, destroy this scene and game object
-        Destroy(GameObject.FindGameObjectWithTag("MainMenu"));
+        Destroy(mainMenu);
 
         SceneManager.LoadScene(_MENU_SCENE_ID_);
         Destroy(gameObject);
@@ -134,10 +140,11 @@ public class GameController : MonoBehaviour
         isGameOver = false;
         levelCompletedCanvas = transform.GetChild(0).gameObject;
         gameOverCanvas = transform.GetChild(1).gameObject;
-        maxCollectableFoodCount = GameObject.FindGameObjectsWithTag("Food").Length;
+        maxCollectableFoodCount = GameObject.FindGameObjectsWithTag(_FOOD_TAG_).Length;
 
         audioSource = gameObject.AddComponent<AudioSource>();
         audioSource.clip = levelCompletedAudioClip;
+        mainMenu = GameObject.FindGameObjectWithTag(_MAIN_MENU_TAG_);
     }
 
 
