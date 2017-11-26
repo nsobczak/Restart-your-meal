@@ -18,7 +18,7 @@ public class TimerScript : MonoBehaviour
     private bool wasTimerOverSoundPlayedOnce;
 
 
-    void PlayTimeOverSound()
+    private void PlayTimeOverSound()
     {
         audioSource.Play();
         wasTimerOverSoundPlayedOnce = true;

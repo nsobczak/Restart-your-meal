@@ -2033,6 +2033,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114725206383204984, guid: 0240838b56fa8744abdedafcb5a80ebb,
+        type: 2}
+      propertyPath: foodEatenAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ca43cba61461a1547b09e094a1fd2f52, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0240838b56fa8744abdedafcb5a80ebb, type: 2}
   m_IsPrefabParent: 0
@@ -2456,6 +2461,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114725206383204984, guid: 0240838b56fa8744abdedafcb5a80ebb,
+        type: 2}
+      propertyPath: foodEatenAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ca43cba61461a1547b09e094a1fd2f52, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0240838b56fa8744abdedafcb5a80ebb, type: 2}
   m_IsPrefabParent: 0
@@ -2798,6 +2808,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114771965507996508, guid: 7d778c6a61935e74393cd80fa8335495,
+        type: 2}
+      propertyPath: foodEatenAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ca43cba61461a1547b09e094a1fd2f52, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7d778c6a61935e74393cd80fa8335495, type: 2}
   m_IsPrefabParent: 0
@@ -4465,6 +4480,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114771965507996508, guid: 7d778c6a61935e74393cd80fa8335495,
+        type: 2}
+      propertyPath: foodEatenAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ca43cba61461a1547b09e094a1fd2f52, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7d778c6a61935e74393cd80fa8335495, type: 2}
   m_IsPrefabParent: 0
@@ -4826,6 +4846,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114725206383204984, guid: 0240838b56fa8744abdedafcb5a80ebb,
+        type: 2}
+      propertyPath: foodEatenAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ca43cba61461a1547b09e094a1fd2f52, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0240838b56fa8744abdedafcb5a80ebb, type: 2}
   m_IsPrefabParent: 0
@@ -4881,7 +4906,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b29973ef659a4d6aa480aa5748c5e48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  splashInWaterAudioClip: {fileID: 0}
+  splashInWaterAudioClip: {fileID: 8300000, guid: f05d50f8dcefbd24db7d3c7b04cee55d,
+    type: 3}
 --- !u!65 &1166156305
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5512,7 +5538,12 @@ Prefab:
         type: 2}
       propertyPath: timeOverAudioClip
       value: 
-      objectReference: {fileID: 8300000, guid: d5b2cc95c4d5cd24d892f0268209c978, type: 3}
+      objectReference: {fileID: 8300000, guid: 8b7383a850db0dc4b9bbcde5915b1117, type: 3}
+    - target: {fileID: 114781289051939788, guid: 9777c7cedfea141b8ad91e41beb4c4ea,
+        type: 2}
+      propertyPath: oneMoreFoodAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ca43cba61461a1547b09e094a1fd2f52, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9777c7cedfea141b8ad91e41beb4c4ea, type: 2}
   m_IsPrefabParent: 0
@@ -5750,6 +5781,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114771965507996508, guid: 7d778c6a61935e74393cd80fa8335495,
+        type: 2}
+      propertyPath: foodEatenAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ca43cba61461a1547b09e094a1fd2f52, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7d778c6a61935e74393cd80fa8335495, type: 2}
   m_IsPrefabParent: 0
@@ -6044,6 +6080,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114771965507996508, guid: 7d778c6a61935e74393cd80fa8335495,
+        type: 2}
+      propertyPath: foodEatenAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ca43cba61461a1547b09e094a1fd2f52, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7d778c6a61935e74393cd80fa8335495, type: 2}
   m_IsPrefabParent: 0
@@ -6391,6 +6432,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114771965507996508, guid: 7d778c6a61935e74393cd80fa8335495,
+        type: 2}
+      propertyPath: foodEatenAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ca43cba61461a1547b09e094a1fd2f52, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7d778c6a61935e74393cd80fa8335495, type: 2}
   m_IsPrefabParent: 0
@@ -7965,6 +8011,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114725206383204984, guid: 0240838b56fa8744abdedafcb5a80ebb,
+        type: 2}
+      propertyPath: foodEatenAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ca43cba61461a1547b09e094a1fd2f52, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0240838b56fa8744abdedafcb5a80ebb, type: 2}
   m_IsPrefabParent: 0
@@ -8786,6 +8837,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114725206383204984, guid: 0240838b56fa8744abdedafcb5a80ebb,
+        type: 2}
+      propertyPath: foodEatenAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ca43cba61461a1547b09e094a1fd2f52, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0240838b56fa8744abdedafcb5a80ebb, type: 2}
   m_IsPrefabParent: 0

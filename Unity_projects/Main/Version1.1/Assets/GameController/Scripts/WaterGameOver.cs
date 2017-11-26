@@ -5,9 +5,9 @@ using UnityEngine;
 public class WaterGameOver : MonoBehaviour
 {
     private AudioSource audioSource;
-
     [SerializeField] private AudioClip splashInWaterAudioClip;
 
+    
     private void Start()
     {
         audioSource = gameObject.AddComponent<AudioSource>();
