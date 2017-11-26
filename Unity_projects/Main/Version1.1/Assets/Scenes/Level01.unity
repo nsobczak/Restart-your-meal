@@ -4881,7 +4881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b29973ef659a4d6aa480aa5748c5e48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SplashInWater: {fileID: 8300000, guid: f05d50f8dcefbd24db7d3c7b04cee55d, type: 3}
+  splashInWaterAudioClip: {fileID: 0}
 --- !u!65 &1166156305
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5508,6 +5508,11 @@ Prefab:
       propertyPath: m_Color.b
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114296818859557314, guid: 9777c7cedfea141b8ad91e41beb4c4ea,
+        type: 2}
+      propertyPath: timeOverAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d5b2cc95c4d5cd24d892f0268209c978, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9777c7cedfea141b8ad91e41beb4c4ea, type: 2}
   m_IsPrefabParent: 0

@@ -6,12 +6,12 @@ public class WaterGameOver : MonoBehaviour
 {
     private AudioSource audioSource;
 
-    [SerializeField] private AudioClip SplashInWater;
+    [SerializeField] private AudioClip splashInWaterAudioClip;
 
     private void Start()
     {
         audioSource = gameObject.AddComponent<AudioSource>();
-        audioSource.clip = SplashInWater;
+        audioSource.clip = splashInWaterAudioClip;
     }
 
     void OnCollisionEnter(Collision col)

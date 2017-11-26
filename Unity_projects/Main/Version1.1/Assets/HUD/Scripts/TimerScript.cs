@@ -13,15 +13,26 @@ public class TimerScript : MonoBehaviour
     private float currentTime;
     private Text textTime;
 
-    //void Awake()
-    //{
-    //    startTime = Time.time;
-    //}
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip timeOverAudioClip;
+    private bool wasTimerOverSoundPlayedOnce;
+
+
+    void PlayTimeOverSound()
+    {
+        audioSource.Play();
+        wasTimerOverSoundPlayedOnce = true;
+    }
+
 
     void Start()
     {
         currentTime = _START_TIME_;
         textTime = GetComponent<Text>();
+
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.clip = timeOverAudioClip;
+        wasTimerOverSoundPlayedOnce = false;
     }
 
     void Update()
@@ -42,6 +53,10 @@ public class TimerScript : MonoBehaviour
             textTime.text = String.Format("{0:00}\"", currentTime);
         }
         else
+        {
+            if (!wasTimerOverSoundPlayedOnce)
+                PlayTimeOverSound();
             GameController.IsGameOver = true;
+        }
     }
 }
