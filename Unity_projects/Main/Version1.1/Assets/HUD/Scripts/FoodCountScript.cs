@@ -5,13 +5,19 @@ using UnityEngine.UI;
 
 public class FoodCountScript : MonoBehaviour
 {
+    #region Parameters
+
     private Text textFoodCount;
 
     private AudioSource audioSource;
     [SerializeField] private AudioClip oneMoreFoodAudioClip;
     private int foodCountScript_internFoodCount;
 
+    #endregion
 
+    
+    //_________________________________________________
+    
     private bool ShouldPlayAudioClip()
     {
         if (GameController.CollectableFoodCount > foodCountScript_internFoodCount)
@@ -23,6 +29,8 @@ public class FoodCountScript : MonoBehaviour
             return false;
     }
 
+    
+    //_________________________________________________
 
     void Start()
     {

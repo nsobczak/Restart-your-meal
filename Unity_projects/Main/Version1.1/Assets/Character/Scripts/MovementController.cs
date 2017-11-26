@@ -7,8 +7,6 @@ public class MovementController : MonoBehaviour
     #region Parameters
 
     [SerializeField] private float Speed = 6.0F;
-    [SerializeField] private float RotationSpeed = 6.0F;
-
     [SerializeField] private float JumpSpeed = 18.0F;
     [SerializeField] private float Gravity = 20.0F;
 
@@ -17,29 +15,30 @@ public class MovementController : MonoBehaviour
     private float forward_backward;
     private float jumpForce;
     private Vector3 forceMove;
-    private bool grounding = false;
-    private bool doubleJump = false;
+    private bool isGrounding = false;
+    private bool canDoubleJump = false;
 
     [SerializeField] private int distance = 2;
     private Vector3 direction;
     private RaycastHit hit;
 
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip jumpAudioClip;
+
     #endregion
 
-    public float getSpeed()
+    //_________________________________________________
+
+    #region Methods
+
+    public float GetSpeed()
     {
         return this.Speed;
     }
 
 
-    void Start()
-    {
-        rigid = GetComponent<Rigidbody>();
-    }
-
-
     //raycast for double jump
-    private bool isGrounding()
+    private bool IsGrounding()
     {
         direction = Vector3.down;
         Debug.DrawRay(transform.position, direction * distance, Color.green);
@@ -49,46 +48,62 @@ public class MovementController : MonoBehaviour
         return false;
     }
 
+    #endregion
+
+//_________________________________________________
+
+    void Start()
+    {
+        rigid = GetComponent<Rigidbody>();
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.clip = jumpAudioClip;
+    }
+
 
     void Update()
     {
         right_left = Input.GetAxis("Horizontal") * Speed;
         forward_backward = Input.GetAxis("Vertical") * Speed;
         jumpForce = 0;
-        grounding = isGrounding();
-        //jump
+        isGrounding = IsGrounding();
+
+
+        // === rotate ===
+        transform.rotation = Quaternion.RotateTowards(transform.rotation,
+            Quaternion.LookRotation(-new Vector3(forceMove.x, 0, forceMove.z)), 2 * Mathf.PI);
+
+
+        // === jump === 
         if (Input.GetKeyDown(KeyCode.Space))
         {
             //Debug.Log("space");
             //Debug.Log("DoubleJump : " + doubleJump);
-            if (!grounding && doubleJump)
+            if (!isGrounding && canDoubleJump)
             {
 //                Debug.Log("doubleJump");
-                doubleJump = false;
+                canDoubleJump = false;
                 jumpForce = JumpSpeed;
+                audioSource.Play();
             }
-            else if (grounding)
+            else if (isGrounding)
             {
 //                Debug.Log("jump");
                 jumpForce = JumpSpeed;
-                doubleJump = true;
+                canDoubleJump = true;
+                audioSource.Play();
             }
         }
+        
+        // === move ===
         forceMove.x = right_left;
         forceMove.z = forward_backward;
         if (jumpForce > 0)
         {
             rigid.AddForce(new Vector3(0, jumpForce, 0),
                 ForceMode.Impulse); //50 is to avoid using ForceMode.Impulse which is 50 action per frame
-            //rigid.AddForce(new Vector3(0, jumpForce, 0) * 50, ForceMode.Force); //50 is to avoid using ForceMode.Impulse which is 50 action per frame
         }
         rigid.AddForce(Vector3.down * Gravity /**Time.deltaTime*/, ForceMode.Force);
         forceMove.y = rigid.velocity.y;
         rigid.velocity = forceMove;
-
-        //rotate
-//        transform.rotation = Quaternion.LookRotation(new Vector3(forceMove.x, 0, forceMove.z));
-        transform.rotation = Quaternion.RotateTowards(transform.rotation,
-            Quaternion.LookRotation(-new Vector3(forceMove.x, 0, forceMove.z)), 2 * Mathf.PI);
     }
 }

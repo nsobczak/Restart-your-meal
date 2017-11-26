@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class TimerScript : MonoBehaviour
 {
+    #region Parameters
+
     private static String Timer;
 
     [SerializeField] private float _START_TIME_ = 10f;
@@ -17,7 +19,11 @@ public class TimerScript : MonoBehaviour
     [SerializeField] private AudioClip timeOverAudioClip;
     private bool wasTimerOverSoundPlayedOnce;
 
-
+    #endregion
+    
+    
+//_________________________________________________
+    
     private void PlayTimeOverSound()
     {
         audioSource.Play();
@@ -25,6 +31,8 @@ public class TimerScript : MonoBehaviour
     }
 
 
+    //_________________________________________________
+    
     void Start()
     {
         currentTime = _START_TIME_;

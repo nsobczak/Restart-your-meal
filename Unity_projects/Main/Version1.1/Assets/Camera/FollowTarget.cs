@@ -25,7 +25,7 @@ public class FollowTarget : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        var speed = target.GetComponent<MovementController>().getSpeed();
+        var speed = target.GetComponent<MovementController>().GetSpeed();
         Velocity = new Vector3(speed, 0, speed);
     }
 
