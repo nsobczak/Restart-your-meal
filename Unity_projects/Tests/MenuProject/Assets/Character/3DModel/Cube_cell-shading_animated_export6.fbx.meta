@@ -1,18 +1,47 @@
 fileFormatVersion: 2
-guid: 872e2394ba22d4273b84193857221faa
-timeCreated: 1511291035
+guid: 530847fd8089246f2b1cf252a7bb7568
+timeCreated: 1511907007
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
+    100000: Body
+    100002: Body_end
+    100004: //RootNode
+    100006: Cube_character
+    100008: Cube_character_rig
+    100010: Feet_left
+    100012: Feet_left_end
+    100014: Feet_right
+    100016: Feet_right_end
+    100018: root
+    400000: Body
+    400002: Body_end
+    400004: //RootNode
+    400006: Cube_character
+    400008: Cube_character_rig
+    400010: Feet_left
+    400012: Feet_left_end
+    400014: Feet_right
+    400016: Feet_right_end
+    400018: root
     2100000: Body
     2100002: Shoe
     2100004: Shoe sole
-    2300000: //RootNode
-    3300000: //RootNode
     4300000: Cube_character
+    7400000: Cube_character_rig|Action
+    7400002: Cube_character_rig|All
+    7400004: Cube_character_rig|CameraAction
+    7400006: Cube_character_rig|Double_jump
+    7400008: Cube_character_rig|Idle
+    7400010: Cube_character_rig|Jump
+    7400012: Cube_character_rig|Jump.001
+    7400014: Cube_character_rig|LampAction
+    7400016: Cube_character_rig|LampAction.001
+    7400018: Cube_character_rig|PoseLib
+    7400020: Cube_character_rig|Walk
+    9500000: //RootNode
+    13700000: Cube_character
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -87,7 +116,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
