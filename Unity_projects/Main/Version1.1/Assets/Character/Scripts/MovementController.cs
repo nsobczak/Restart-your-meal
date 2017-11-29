@@ -6,6 +6,13 @@ public class MovementController : MonoBehaviour
 {
     #region Parameters
 
+    private Animator animator;
+    [SerializeField] private float _ANIMATOR_SPEED_ = 2;
+    int jumpHash = Animator.StringToHash("Jump");
+    int doubleJumpHash = Animator.StringToHash("Double_jump");
+    private const string _ANIMATOR_GROUNDING_BOOL_ = "IsGrounding";
+    private const string _ANIMATOR_WALKING_BOOL_ = "IsWalking";
+
     [SerializeField] private float Speed = 6.0F;
     [SerializeField] private float JumpSpeed = 18.0F;
     [SerializeField] private float Gravity = 20.0F;
@@ -57,6 +64,9 @@ public class MovementController : MonoBehaviour
         rigid = GetComponent<Rigidbody>();
         audioSource = gameObject.AddComponent<AudioSource>();
         audioSource.clip = jumpAudioClip;
+
+        animator = GetComponent<Animator>();
+        animator.speed = _ANIMATOR_SPEED_;
     }
 
 
@@ -84,6 +94,7 @@ public class MovementController : MonoBehaviour
                 canDoubleJump = false;
                 jumpForce = JumpSpeed;
                 audioSource.Play();
+                animator.SetTrigger(doubleJumpHash);
             }
             else if (isGrounding)
             {
@@ -91,10 +102,20 @@ public class MovementController : MonoBehaviour
                 jumpForce = JumpSpeed;
                 canDoubleJump = true;
                 audioSource.Play();
+                animator.SetTrigger(jumpHash);
             }
         }
-        
+        if (isGrounding)
+            animator.SetBool(_ANIMATOR_GROUNDING_BOOL_, true);
+
         // === move ===
+        if (right_left == 0 && forward_backward == 0)
+            animator.SetBool(_ANIMATOR_WALKING_BOOL_, false);
+        else if (!animator.GetBool(_ANIMATOR_WALKING_BOOL_) && isGrounding)
+        {
+            animator.SetBool(_ANIMATOR_WALKING_BOOL_, true);
+        }
+            
         forceMove.x = right_left;
         forceMove.z = forward_backward;
         if (jumpForce > 0)
