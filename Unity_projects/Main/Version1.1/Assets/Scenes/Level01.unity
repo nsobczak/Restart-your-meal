@@ -3804,7 +3804,7 @@ Prefab:
     - target: {fileID: 114103723308601950, guid: 0b73f81333800423daddd116ee579eed,
         type: 2}
       propertyPath: Gravity
-      value: 40
+      value: 38
       objectReference: {fileID: 0}
     - target: {fileID: 114103723308601950, guid: 0b73f81333800423daddd116ee579eed,
         type: 2}
