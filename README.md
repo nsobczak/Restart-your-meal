@@ -1,30 +1,17 @@
-# Game-Off-2017
+# Restart Your Meal
 
-Game Off 2017 game
+Game developped for GitHub GameOff 2017.
 
 
-## Ideas
+## Aim of the game
 
-### general
+Aim of the game: Survive on a desert island. Desert ? Or maybe not. Ghosts may come bother you in your search for food
 
-- 3D game
-- cartoon art
-- find a name
-- camera profile TPS game
 
-### gameplay
+## Rules
 
-- redo same level
-- character has to avoid to meet previous ghosts
-- respawn in different point at each run
-- character has to collect max pickable objects
-- timer to set difficulty level easily
+Eat all food of the level in the limited time, but beware ghosts.
 
-### enhancement
+Each time you eat all the food, you complete a level.
 
-- sound music
-- sound effect
-- menu design, with credits
-- add story
-- choose between character model
-- choose between character color
+Each time you complete a level, a new ghost appear.
