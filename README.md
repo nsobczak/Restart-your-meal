@@ -2,6 +2,7 @@
 
 Game developped for GitHub GameOff 2017.
 
+![SplashScreen](Media/SplashScreen-Island_1920x1080.png)
 
 ## Aim of the game
 
