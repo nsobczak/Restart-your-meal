@@ -4,35 +4,39 @@ using UnityEngine;
 
 public class FollowTarget : MonoBehaviour
 {
+    #region Parameters
 
+    // === follow target ===
     public Transform target;
 
-    [SerializeField]
-    private Vector3 distance;
-    [SerializeField]
-    private float smoothTime;
+    [SerializeField] private Vector3 distance;
+    [SerializeField] private float smoothTime;
     private Vector3 Velocity;
 
-
-    //==================
-
+    // === raycast ===
     private Transform prevTransObject;
+
     private Material prevObjectMaterial;
     public float alphaValue = 0.5f; // our alpha value
-    public List<int> transparentLayers = new List<int>();   // transparency layers.
-    //=====================
 
-    // Use this for initialization
+    public List<int> transparentLayers = new List<int>(); // transparency layers.
+
+    #endregion
+
+
+    //_________________________________________________
+
     void Start()
     {
         var speed = target.GetComponent<MovementController>().GetSpeed();
         Velocity = new Vector3(speed, 0, speed);
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        transform.position = Vector3.SmoothDamp(transform.position, target.position - distance, ref Velocity, smoothTime);
+        transform.position =
+            Vector3.SmoothDamp(transform.position, target.position - distance, ref Velocity, smoothTime);
 
         // Cast ray from camera.position to target.position and check if the specified layers are between them.
         Ray ray = new Ray(transform.position, (target.position - transform.position).normalized);
@@ -43,11 +47,11 @@ public class FollowTarget : MonoBehaviour
             Transform objectHit = transHit.transform;
             if (transparentLayers.Contains(objectHit.gameObject.layer))
             {
-
                 if (prevTransObject != null)
                 {
                     var colo = prevObjectMaterial.color;
-                    prevObjectMaterial.color = new Color(prevObjectMaterial.color.r, prevObjectMaterial.color.g, prevObjectMaterial.color.b, 1);
+                    prevObjectMaterial.color = new Color(prevObjectMaterial.color.r, prevObjectMaterial.color.g,
+                        prevObjectMaterial.color.b, 1);
                 }
 
                 if (objectHit.GetComponent<MeshRenderer>() != null)
@@ -57,18 +61,17 @@ public class FollowTarget : MonoBehaviour
                     prevObjectMaterial = prevTransObject.GetComponent<MeshRenderer>().material;
                     // Can only apply alpha if this material shader is transparent.
                     var colo = prevObjectMaterial.color;
-                    prevObjectMaterial.color = new Color(prevObjectMaterial.color.r, prevObjectMaterial.color.g, prevObjectMaterial.color.b, alphaValue);
+                    prevObjectMaterial.color = new Color(prevObjectMaterial.color.r, prevObjectMaterial.color.g,
+                        prevObjectMaterial.color.b, alphaValue);
                 }
             }
             else if (prevTransObject != null)
             {
                 var colo = prevObjectMaterial.color;
-                prevObjectMaterial.color = new Color(prevObjectMaterial.color.r, prevObjectMaterial.color.g, prevObjectMaterial.color.b, 1);
+                prevObjectMaterial.color = new Color(prevObjectMaterial.color.r, prevObjectMaterial.color.g,
+                    prevObjectMaterial.color.b, 1);
                 prevTransObject = null;
             }
         }
     }
-
-
-
 }

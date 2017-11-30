@@ -6,16 +6,19 @@ public class MovementController : MonoBehaviour
 {
     #region Parameters
 
+    // === animations ===
     private Animator animator;
-    [SerializeField] private float _ANIMATOR_SPEED_ = 2;
+
+    [SerializeField] private float _ANIMATOR_SPEED_ = 1.8f;
     int jumpHash = Animator.StringToHash("Jump");
     int doubleJumpHash = Animator.StringToHash("Double_jump");
     private const string _ANIMATOR_GROUNDING_BOOL_ = "IsGrounding";
     private const string _ANIMATOR_WALKING_BOOL_ = "IsWalking";
 
-    [SerializeField] private float Speed = 6.0F;
-    [SerializeField] private float JumpSpeed = 18.0F;
-    [SerializeField] private float Gravity = 20.0F;
+    // === movements ===
+    [SerializeField] private float Speed = 16F;
+    [SerializeField] private float JumpSpeed = 16F;
+    [SerializeField] private float Gravity = 28F;
 
     private Rigidbody rigid = null;
     private float right_left;
@@ -25,10 +28,12 @@ public class MovementController : MonoBehaviour
     private bool isGrounding = false;
     private bool canDoubleJump = false;
 
+    // === raycast ===
     [SerializeField] private int distance = 2;
     private Vector3 direction;
     private RaycastHit hit;
 
+    // === audio ===
     private AudioSource audioSource;
     [SerializeField] private AudioClip jumpAudioClip;
 
@@ -115,7 +120,7 @@ public class MovementController : MonoBehaviour
         {
             animator.SetBool(_ANIMATOR_WALKING_BOOL_, true);
         }
-            
+
         forceMove.x = right_left;
         forceMove.z = forward_backward;
         if (jumpForce > 0)
