@@ -9,6 +9,7 @@ public class ShowPanels : MonoBehaviour
 
     public GameObject rulesPanel;
     public GameObject optionsPanel; //Store a reference to the Game Object OptionsPanel 
+    public GameObject controlsPanel;
     public GameObject highscorePanel;
     public GameObject creditsPanel;
     public GameObject menuPanel; //Store a reference to the Game Object MenuPanel 
@@ -29,6 +30,12 @@ public class ShowPanels : MonoBehaviour
     public void ShowOptionsPanel()
     {
         optionsPanel.SetActive(true);
+        optionsTint.SetActive(true);
+    }
+
+    public void ShowControlsPanel()
+    {
+        controlsPanel.SetActive(true);
         optionsTint.SetActive(true);
     }
 
@@ -72,6 +79,12 @@ public class ShowPanels : MonoBehaviour
     public void HideOptionsPanel()
     {
         optionsPanel.SetActive(false);
+        optionsTint.SetActive(false);
+    }
+
+    public void HideControlsPanel()
+    {
+        controlsPanel.SetActive(false);
         optionsTint.SetActive(false);
     }
 
