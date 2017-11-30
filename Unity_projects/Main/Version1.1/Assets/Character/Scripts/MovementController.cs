@@ -7,8 +7,8 @@ public class MovementController : MonoBehaviour
     #region Parameters
 
     // === animations ===
-    private Animator animator;
 
+    private Animator animator;
     [SerializeField] private float _ANIMATOR_SPEED_ = 1.8f;
     int jumpHash = Animator.StringToHash("Jump");
     int doubleJumpHash = Animator.StringToHash("Double_jump");
@@ -16,9 +16,10 @@ public class MovementController : MonoBehaviour
     private const string _ANIMATOR_WALKING_BOOL_ = "IsWalking";
 
     // === movements ===
-    [SerializeField] private float Speed = 16F;
-    [SerializeField] private float JumpSpeed = 16F;
-    [SerializeField] private float Gravity = 28F;
+
+    [SerializeField] private float Speed = 15f;
+    [SerializeField] private float JumpSpeed = 12f;
+    [SerializeField] private float Gravity = 1000f;
 
     private Rigidbody rigid = null;
     private float right_left;
@@ -29,11 +30,13 @@ public class MovementController : MonoBehaviour
     private bool canDoubleJump = false;
 
     // === raycast ===
+
     [SerializeField] private int distance = 2;
     private Vector3 direction;
     private RaycastHit hit;
 
     // === audio ===
+
     private AudioSource audioSource;
     [SerializeField] private AudioClip jumpAudioClip;
 
@@ -128,7 +131,7 @@ public class MovementController : MonoBehaviour
             rigid.AddForce(new Vector3(0, jumpForce, 0),
                 ForceMode.Impulse); //50 is to avoid using ForceMode.Impulse which is 50 action per frame
         }
-        rigid.AddForce(Vector3.down * Gravity /**Time.deltaTime*/, ForceMode.Force);
+        rigid.AddForce(Vector3.down * Gravity * Time.deltaTime, ForceMode.Force);
         forceMove.y = rigid.velocity.y;
         rigid.velocity = forceMove;
     }

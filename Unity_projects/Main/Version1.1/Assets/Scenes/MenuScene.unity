@@ -209,15 +209,30 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 224465429838762242, guid: 45616935e4fe10f48b62da1347801a16,
+    - target: {fileID: 224826160972659146, guid: 45616935e4fe10f48b62da1347801a16,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: -9.548599
+      value: 54.9985
+      objectReference: {fileID: 0}
+    - target: {fileID: 224592660430218918, guid: 45616935e4fe10f48b62da1347801a16,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -50.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 224015853344742596, guid: 45616935e4fe10f48b62da1347801a16,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 224316358571744998, guid: 45616935e4fe10f48b62da1347801a16,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: -51.998505
+      value: -39.6985
+      objectReference: {fileID: 0}
+    - target: {fileID: 224465429838762242, guid: 45616935e4fe10f48b62da1347801a16,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -166.0109
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 45616935e4fe10f48b62da1347801a16, type: 2}

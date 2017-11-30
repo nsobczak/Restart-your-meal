@@ -3804,12 +3804,12 @@ Prefab:
     - target: {fileID: 114103723308601950, guid: 0b73f81333800423daddd116ee579eed,
         type: 2}
       propertyPath: Gravity
-      value: 38
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 114103723308601950, guid: 0b73f81333800423daddd116ee579eed,
         type: 2}
       propertyPath: JumpSpeed
-      value: 12.2
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0b73f81333800423daddd116ee579eed, type: 2}
