@@ -7,7 +7,7 @@ Game developped for GitHub GameOff 2017.
 
 ## Aim of the game
 
-**Aim of the game:** Survive on a desert island. Desert ? Or maybe not. Ghosts may come bother you in your search for food
+**Aim of the game:** Survive on a desert island. Desert ? Or maybe not. Ghosts from your previous meals may come bother you in your search for food
 
 
 ## Rules
