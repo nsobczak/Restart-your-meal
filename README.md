@@ -19,3 +19,25 @@ Game developped for GitHub GameOff 2017.
 - Each time you complete a level, a new ghost appear.
 
 ![LogoImage](Media/Logo/Logo_alpha_1024x1024.png)
+
+
+## Credits
+
+### Code 
+[Vincent Reynaert](https://github.com/VincentReynaert), [Nicolas Sobczak](https://nsobczak.github.io/portfolio/)
+
+### Water asset
+[Danielzeller](https://github.com/danielzeller/Lowpoly-Water-Unity)
+
+### 2D art
+[Vincent Reynaert](https://github.com/VincentReynaert)
+
+### 3D art
+[Nicolas Sobczak](https://nsobczak.github.io/portfolio/)
+
+### Animations
+[Nicolas Sobczak](https://nsobczak.github.io/portfolio/)
+
+### Music
+ - menu: "That's It For Today -Pieces-" by ViRiX Dreamcore (David Mckee) - CC-BY-SA 3.0 license
+ - in game: "Green & Gray" by Pugly - CC-BY-SA 3.0 license
